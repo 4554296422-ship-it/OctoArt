@@ -1,0 +1,7 @@
+[2026-10-16 15:30:06]
+To: kauan.estevam10@gmail.com
+Subject: Bem-vindo(a) ao OctoArt!
+
+Conta criada no OctoArt. Acesse: http://localhost/octoart_php/login.php
+
+---

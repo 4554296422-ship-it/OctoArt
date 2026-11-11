@@ -1,0 +1,7 @@
+[2026-10-06 13:24:37]
+To: Adrielicristine343@gmail.com
+Subject: Bem-vindo(a) ao OctoArt!
+
+Conta criada no OctoArt. Acesse: http://localhost/octoart_php/login.php
+
+---

@@ -1,0 +1,7 @@
+[2026-10-27 12:40:49]
+To: mhafuycafj@gmail.con
+Subject: Bem-vindo(a) ao OctoArt!
+
+Conta criada no OctoArt. Acesse: http://localhost/octoart_php/login.php
+
+---

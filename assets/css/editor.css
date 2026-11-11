@@ -1,0 +1,78 @@
+.editor-page{max-width:1100px;margin:0 auto;padding:16px 16px 60px}
+.editor-topbar{display:flex;align-items:center;gap:12px;flex-wrap:wrap;margin-bottom:18px}
+.editor-topbar h1{flex:1;margin:0;font-size:1.35rem}
+.editor-layout{display:grid;grid-template-columns:280px 1fr;gap:20px;align-items:start}
+.editor-meta{
+  background:var(--white,#fff);border:1.5px solid var(--grey-300,#ddd);
+  border-radius:16px;padding:16px;position:sticky;top:72px;
+}
+.editor-canvas{min-width:0}
+.block-toolbar{
+  display:flex;flex-wrap:wrap;gap:8px;align-items:center;
+  background:var(--white,#fff);border:1.5px solid var(--grey-300,#ddd);
+  border-radius:14px;padding:10px 12px;margin-bottom:14px;
+}
+.block-toolbar.sticky{position:sticky;top:64px;z-index:5}
+.blocks-list{display:flex;flex-direction:column;gap:14px}
+.block-card{
+  background:var(--white,#fff);border:1.5px solid var(--grey-300,#ddd);
+  border-radius:16px;padding:14px;
+}
+.block-head{display:flex;justify-content:space-between;align-items:center;margin-bottom:10px;gap:8px}
+.block-moves{display:flex;gap:4px}
+.block-card textarea{
+  width:100%;min-height:100px;border:1.5px solid var(--grey-300,#ddd);
+  border-radius:12px;padding:12px;font:inherit;resize:vertical;
+  background:var(--grey-100,#f7f7fb);color:inherit;
+}
+.img-drop,.grid-cell,.capa-box{
+  border:1.5px dashed var(--grey-300,#ccc);border-radius:12px;
+  min-height:140px;display:flex;flex-direction:column;align-items:center;justify-content:center;
+  gap:8px;cursor:pointer;overflow:hidden;position:relative;background:var(--grey-100,#f7f7fb);
+}
+.img-drop img,.capa-box img,.grid-cell img{width:100%;height:100%;object-fit:cover;position:absolute;inset:0}
+.capa-box{height:140px}
+.photo-grid{display:grid;gap:8px}
+.photo-grid.cols-2{grid-template-columns:1fr 1fr}
+.photo-grid.cols-3{grid-template-columns:1fr 1fr 1fr}
+.photo-grid.cols-4{grid-template-columns:1fr 1fr 1fr 1fr}
+.grid-cell{min-height:110px}
+.grid-cell .cell-change{position:relative;z-index:2;margin-top:auto;background:rgba(255,255,255,.9)}
+.uploading{opacity:.6;pointer-events:none}
+.empty-blocks{padding:40px;text-align:center;color:var(--grey-600);border:1.5px dashed var(--grey-300);border-radius:16px}
+.editor-actions-bottom{margin-top:18px}
+.project-photo-grid{display:grid;gap:10px;margin:16px 0}
+.project-photo-grid.cols-2{grid-template-columns:1fr 1fr}
+.project-photo-grid.cols-3{grid-template-columns:1fr 1fr 1fr}
+.project-photo-grid.cols-4{grid-template-columns:1fr 1fr 1fr 1fr}
+.project-photo-grid img{width:100%;height:220px;object-fit:cover;border-radius:12px}
+.city-suggest{
+  position:absolute;left:0;right:0;top:100%;z-index:20;
+  background:#fff;border:1.5px solid var(--grey-300);border-radius:12px;
+  max-height:220px;overflow:auto;box-shadow:0 10px 30px rgba(0,0,0,.12);display:none;
+}
+.city-suggest button{
+  display:block;width:100%;text-align:left;padding:10px 12px;border:0;background:transparent;
+  cursor:pointer;font:inherit;border-bottom:1px solid #eee;
+}
+.city-suggest button:hover{background:var(--blue-50,#f0edff)}
+.field-suggest{position:relative}
+html.dark .editor-meta,html.dark .block-toolbar,html.dark .block-card{background:#161322;border-color:var(--grey-300)}
+html.dark .block-card textarea,html.dark .img-drop,html.dark .grid-cell,html.dark .capa-box{background:#0E0C18;border-color:var(--grey-300);color:#eee}
+html.dark .city-suggest{background:#161322;border-color:var(--grey-300)}
+html.dark .city-suggest button{color:#eee;border-color:#2a2740}
+html.dark .city-suggest button:hover{background:#252040}
+
+@media(max-width:900px){
+  .editor-layout{grid-template-columns:1fr}
+  .editor-meta{position:static}
+  .block-toolbar.sticky{position:static}
+  .photo-grid.cols-4{grid-template-columns:1fr 1fr}
+  .project-photo-grid.cols-4,.project-photo-grid.cols-3{grid-template-columns:1fr 1fr}
+}
+@media(max-width:520px){
+  .photo-grid.cols-3,.photo-grid.cols-2,.photo-grid.cols-4{grid-template-columns:1fr 1fr}
+  .project-photo-grid.cols-2,.project-photo-grid.cols-3,.project-photo-grid.cols-4{grid-template-columns:1fr}
+  .project-photo-grid img{height:180px}
+  .editor-topbar h1{font-size:1.1rem;width:100%;order:3}
+}

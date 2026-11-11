@@ -1,0 +1,7 @@
+[2026-10-05 13:09:00]
+To: 4553457023@estudante.sed.sc.gov.br
+Subject: Redefinir senha — OctoArt
+
+Redefinir senha: http://localhost/octoart_php/redefinir_senha.php?token=fcf5cc6349ad894d5f1c583401bee859390e6b4cca0d06db
+
+---

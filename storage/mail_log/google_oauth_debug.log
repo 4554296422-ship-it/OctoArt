@@ -1,0 +1,1581 @@
+[2026-10-02 15:46:05] AUTH_START redirect_uri=http://localhost/octoart_php/google_callback.php
+[2026-10-02 15:46:21] AUTH_START redirect_uri=http://localhost/octoart_php/google_callback.php
+[2026-10-02 15:48:14] AUTH_START redirect_uri=http://localhost/octoart_php/google_callback.php
+[2026-10-02 15:49:26] AUTH_START redirect_uri=http://localhost/octoart_php/google_callback.php
+[2026-10-02 15:49:59] AUTH_START redirect_uri=http://localhost/octoart_php/google_callback.php
+[2026-10-02 15:58:49] AUTH_START redirect_uri=http://localhost/octoart_php/google_callback.php/google_callback.php
+[2026-10-02 15:59:46] AUTH_START redirect_uri=http://localhost/octoart_php/google_callback.php/google_callback.php
+[2026-10-02 16:00:05] AUTH_START redirect_uri=http://localhost/octoart_php/google_callback.php/google_callback.php
+[2026-10-02 16:00:17] AUTH_START redirect_uri=http://localhost/octoart_php/google_callback.php/google_callback.php
+[2026-10-02 16:00:20] AUTH_START redirect_uri=http://localhost/octoart_php/google_callback.php/google_callback.php
+[2026-10-02 16:01:12] AUTH_START redirect_uri=http://localhost/octoart_php/google_callback.php/google_callback.php
+[2026-10-02 16:01:28] AUTH_START redirect_uri=http://localhost/octoart_php/google_callback.php/google_callback.php
+[2026-10-02 16:03:02] AUTH_START redirect_uri=http://localhost/octoart_php/google_callback.php
+[2026-10-02 16:05:48] === CALLBACK START ===
+[2026-10-02 16:05:48] GET | {
+    "state": "db4827398beb7acc6c9f1b8ce677c672",
+    "iss": "https:\/\/accounts.google.com",
+    "code": "4\/0AXlqoi6Fv1FYSMbF3Osrwm7L7ObOpOhSPJ3e2weEsKN-veFCOsFiLzAMI9dGFKuORu3z-A",
+    "scope": "email profile https:\/\/www.googleapis.com\/auth\/userinfo.profile https:\/\/www.googleapis.com\/auth\/userinfo.email openid",
+    "authuser": "1",
+    "hd": "estudante.sed.sc.gov.br",
+    "prompt": "consent"
+}
+[2026-10-02 16:05:48] SESSION_keys | [
+    "google_oauth_state",
+    "google_redirect_uri"
+]
+[2026-10-02 16:05:48] config | {
+    "redirect_uri": "http:\/\/localhost\/octoart_php\/google_callback.php",
+    "app_url": "https\/\/localhost\/octoart",
+    "has_client_id": true,
+    "has_secret": true,
+    "client_id_prefix": "179150202497-r7cdrp6…",
+    "session_state": "db482739…",
+    "got_state": "db482739…"
+}
+[2026-10-02 16:05:48] token_request | {
+    "url": "https:\/\/oauth2.googleapis.com\/token",
+    "redirect_uri": "http:\/\/localhost\/octoart_php\/google_callback.php"
+}
+[2026-10-02 16:05:49] token_response | {
+    "http_ok": true,
+    "http_code": 200,
+    "error": "",
+    "body": {
+        "access_token": "ya29.a0AX07Cmsx1G3h4qR7UYYvCJXhmnl2wN-XjHm4p3JG5dhPOf7YnIYZKJ8jr4M7GVr8CdTGyPhS4P_xEPQ9nxDsFyOWyXTrfzN6iwkR9J8gZ7s_0m4fHXJ2YcgAFBQTYWVDN1gTfKFPFXQW74nSlkL-az15X1RxAg9sMEeb-KmcV--1uE-Xxp7_7-EgTyEX3JCZieefEnkaCgYKAeASARISFQHGX2MipE7khULMr6YTJOWYKsmlsA0206",
+        "expires_in": 3599,
+        "scope": "https:\/\/www.googleapis.com\/auth\/userinfo.profile openid https:\/\/www.googleapis.com\/auth\/userinfo.email",
+        "token_type": "Bearer",
+        "id_token": "eyJhbGciOiJSUzI1NiIsImtpZCI6Ijk0M2EzYTVkN2Q5MTk2MjVhNDU0ZTQ4OWI3NWMyOWFkYWI1N2FjYmEiLCJ0eXAiOiJKV1QifQ.eyJpc3MiOiJodHRwczovL2FjY291bnRzLmdvb2dsZS5jb20iLCJhenAiOiIxNzkxNTAyMDI0OTctcjdjZHJwNjc4YnFxYmhkcnE0dXQ4M3M3MzdpZ3Mzcm4uYXBwcy5nb29nbGV1c2VyY29udGVudC5jb20iLCJhdWQiOiIxNzkxNTAyMDI0OTctcjdjZHJwNjc4YnFxYmhkcnE0dXQ4M3M3MzdpZ3Mzcm4uYXBwcy5nb29nbGV1c2VyY29udGVudC5jb20iLCJzdWIiOiIxMDUyMDE0MTY2MjMxMDA2OTY0ODQiLCJoZCI6ImVzdHVkYW50ZS5zZWQuc2MuZ292LmJyIiwiZW1haWwiOiI0NTU0Mjk2NDIyQGVzdHVkYW50ZS5zZWQuc2MuZ292LmJyIiwiZW1haWxfdmVyaWZpZWQiOnRydWUsImF0X2hhc2giOiIzNThrc2V1MGh6S0FsZ2s5WkhqeE9RIiwibmFtZSI6IkFORFJJRUxJIENSSVNUSU5FIEpPVkVOQ0lPIERBIFNJTFZBIiwicGljdHVyZSI6Imh0dHBzOi8vbGgzLmdvb2dsZXVzZXJjb250ZW50LmNvbS9hL0FDZzhvY0xfNzRUZDNhZzlXVUpJMjhzREVtZ1BYeU1RTmRub2RLWURmU0xoT1RQY2pWbnMyZ0ppPXM5Ni1jIiwiZ2l2ZW5fbmFtZSI6IkFORFJJRUxJIiwiZmFtaWx5X25hbWUiOiJDUklTVElORSBKT1ZFTkNJTyBEQSBTSUxWQSIsImlhdCI6MTc5MDk0OTk1MiwiZXhwIjoxNzkwOTUzNTUyfQ.NOpIXdo4p-xME2p-JqgirUiJygCQqKGVZYKRgDo3JlXnXmOJyWxe1wWBw-oCY86QJ97d2pZwLLzhUaU3iXxz7ffO5jKrH82feijCKBOjNYjP9hQOXKnizZpWqGloaNdWRsbSF12uAfcHsQqEbuJTkaYqW9UaV1-yg6y9obzvtr6ysiX49KNblZLYJcwlWf6okq2iL7Xk2aK-mztBaC2WR_BSogS3ERMIzaIHMv61J_AmrASV1NZK4v9LQZxQuXbxnWKTzWG492L1HEbCZoVpjJgGnPFrtaCMKRop-wm9aXOiWNLVVdI0CK-YTT14uFr6eY-ZdjRF7jv3k6h2Vxc7Fg"
+    }
+}
+[2026-10-02 16:05:49] userinfo | {
+    "id": "105201416623100696484",
+    "email": "4554296422@estudante.sed.sc.gov.br",
+    "verified_email": true,
+    "name": "ANDRIELI CRISTINE JOVENCIO DA SILVA",
+    "given_name": "ANDRIELI",
+    "family_name": "CRISTINE JOVENCIO DA SILVA",
+    "picture": "https:\/\/lh3.googleusercontent.com\/a\/ACg8ocL_74Td3ag9WUJI28sDEmgPXyMQNdnodKYDfSLhOTPcjVns2gJi=s96-c",
+    "hd": "estudante.sed.sc.gov.br"
+}
+[2026-10-02 16:05:49] user_created | {
+    "id": 11,
+    "email": "4554296422@estudante.sed.sc.gov.br"
+}
+[2026-10-02 16:05:51] mail | {
+    "to": "4554296422@estudante.sed.sc.gov.br",
+    "ok": true,
+    "isNew": true
+}
+[2026-10-02 16:06:15] === CALLBACK START ===
+[2026-10-02 16:06:15] GET | {
+    "state": "db4827398beb7acc6c9f1b8ce677c672",
+    "iss": "https:\/\/accounts.google.com",
+    "code": "4\/0AXlqoi4jKfuDX8ARHjgY91XrRmXdX7BPTk3KdaqGsg7wpdkw2zxbKTuK7jOYT9gk5mw-wA",
+    "scope": "email profile https:\/\/www.googleapis.com\/auth\/userinfo.email openid https:\/\/www.googleapis.com\/auth\/userinfo.profile",
+    "authuser": "1",
+    "hd": "estudante.sed.sc.gov.br",
+    "prompt": "none"
+}
+[2026-10-02 16:06:15] SESSION_keys | []
+[2026-10-02 16:06:15] config | {
+    "redirect_uri": "http:\/\/localhost\/octoart_php\/google_callback.php",
+    "app_url": "https\/\/localhost\/octoart",
+    "has_client_id": true,
+    "has_secret": true,
+    "client_id_prefix": "179150202497-r7cdrp6…",
+    "session_state": "(vazio)",
+    "got_state": "db482739…"
+}
+[2026-10-02 16:06:15] token_request | {
+    "url": "https:\/\/oauth2.googleapis.com\/token",
+    "redirect_uri": "http:\/\/localhost\/octoart_php\/google_callback.php"
+}
+[2026-10-02 16:06:16] token_response | {
+    "http_ok": true,
+    "http_code": 200,
+    "error": "",
+    "body": {
+        "access_token": "ya29.a0AX07CmtJ5M0wtUtoS3ALISqoCwJTxeLBn9ZyyhYRK1_Gsuu6IMx5wfrogmIH4U1e5XB1d0_n8biPPxgm_MVmqUxkabaq0VpsRDybgOEg4vIqTF-fACoI6Hn4rN8PaCyrYP1V_M8YsPpGOMjNxF6LxeMA8Snvs83a6Qub8LEWSHwpJGXYOSSfcegRUsstRg5gfaeGEwM7gOq_z9Kw-pxDl0a4dcSwDcIFMBXBXiDHiTxf1JnD8ItaMjkHnlEQpBA8ENFId4-URC58-t0TLxb8NqWtFbYQNgaCgYKAcQSARISFQHGX2MiHNv4QFNluIt4v5GlWPB-4A0293",
+        "expires_in": 3598,
+        "scope": "openid https:\/\/www.googleapis.com\/auth\/userinfo.profile https:\/\/www.googleapis.com\/auth\/userinfo.email",
+        "token_type": "Bearer",
+        "id_token": "eyJhbGciOiJSUzI1NiIsImtpZCI6Ijk0M2EzYTVkN2Q5MTk2MjVhNDU0ZTQ4OWI3NWMyOWFkYWI1N2FjYmEiLCJ0eXAiOiJKV1QifQ.eyJpc3MiOiJodHRwczovL2FjY291bnRzLmdvb2dsZS5jb20iLCJhenAiOiIxNzkxNTAyMDI0OTctcjdjZHJwNjc4YnFxYmhkcnE0dXQ4M3M3MzdpZ3Mzcm4uYXBwcy5nb29nbGV1c2VyY29udGVudC5jb20iLCJhdWQiOiIxNzkxNTAyMDI0OTctcjdjZHJwNjc4YnFxYmhkcnE0dXQ4M3M3MzdpZ3Mzcm4uYXBwcy5nb29nbGV1c2VyY29udGVudC5jb20iLCJzdWIiOiIxMDUyMDE0MTY2MjMxMDA2OTY0ODQiLCJoZCI6ImVzdHVkYW50ZS5zZWQuc2MuZ292LmJyIiwiZW1haWwiOiI0NTU0Mjk2NDIyQGVzdHVkYW50ZS5zZWQuc2MuZ292LmJyIiwiZW1haWxfdmVyaWZpZWQiOnRydWUsImF0X2hhc2giOiItN0k1UjZBYUEyNVU4ZjlTaHptZE93IiwibmFtZSI6IkFORFJJRUxJIENSSVNUSU5FIEpPVkVOQ0lPIERBIFNJTFZBIiwicGljdHVyZSI6Imh0dHBzOi8vbGgzLmdvb2dsZXVzZXJjb250ZW50LmNvbS9hL0FDZzhvY0xfNzRUZDNhZzlXVUpJMjhzREVtZ1BYeU1RTmRub2RLWURmU0xoT1RQY2pWbnMyZ0ppPXM5Ni1jIiwiZ2l2ZW5fbmFtZSI6IkFORFJJRUxJIiwiZmFtaWx5X25hbWUiOiJDUklTVElORSBKT1ZFTkNJTyBEQSBTSUxWQSIsImlhdCI6MTc5MDk0OTk3OSwiZXhwIjoxNzkwOTUzNTc5fQ.QP_VXk80bf3Qt_NsesXanOHoW4mL4YWxxhqA4GOh2pQHknDcsLW66pGFIVyx2gSx94NthxQSd29xrJ6O68bx6w5T5qp0j6c8DXDy1mp8t1RHNLx9TNtC1tOZhYDQ1rLLGZEuq-OI6RUgqu4fiU7pe8MdYbaYgZiJoizVt3_Q8ZGKSgxSe3fj3_3q7HkF8a035Gp174zYMGGG0B8-X8ez7Zi-_bXFCC8vtJQjF6dNaSFB-iEK4UTBBFLQ-G-rRFny0blrpEUz6lwN6XX6xCHMq_Nm92-VEkNjuUPDv9F2OILe-mj-oiCKW-fygCmAQ_yxXlRwe8J4VjKw0r0E8srUsQ"
+    }
+}
+[2026-10-02 16:06:16] userinfo | {
+    "id": "105201416623100696484",
+    "email": "4554296422@estudante.sed.sc.gov.br",
+    "verified_email": true,
+    "name": "ANDRIELI CRISTINE JOVENCIO DA SILVA",
+    "given_name": "ANDRIELI",
+    "family_name": "CRISTINE JOVENCIO DA SILVA",
+    "picture": "https:\/\/lh3.googleusercontent.com\/a\/ACg8ocL_74Td3ag9WUJI28sDEmgPXyMQNdnodKYDfSLhOTPcjVns2gJi=s96-c",
+    "hd": "estudante.sed.sc.gov.br"
+}
+[2026-10-02 16:06:16] user_linked | {
+    "id": 11,
+    "email": "4554296422@estudante.sed.sc.gov.br"
+}
+[2026-10-02 16:06:18] mail | {
+    "to": "4554296422@estudante.sed.sc.gov.br",
+    "ok": true,
+    "isNew": false
+}
+[2026-10-02 16:06:30] AUTH_START redirect_uri=http://localhost/octoart_php/google_callback.php
+[2026-10-02 16:06:35] === CALLBACK START ===
+[2026-10-02 16:06:35] GET | {
+    "state": "4fe0addbf08426c8f50bcb0bdda17497",
+    "iss": "https:\/\/accounts.google.com",
+    "code": "4\/0AXlqoi6jEDPrU3BFV8E3lg_9DUVB1RPOE2nfP6OKwKJymuBsEDyZSLlPO5P29FfOWOIRww",
+    "scope": "email profile https:\/\/www.googleapis.com\/auth\/userinfo.profile openid https:\/\/www.googleapis.com\/auth\/userinfo.email",
+    "authuser": "1",
+    "hd": "estudante.sed.sc.gov.br",
+    "prompt": "none"
+}
+[2026-10-02 16:06:35] SESSION_keys | [
+    "google_oauth_state",
+    "google_redirect_uri"
+]
+[2026-10-02 16:06:35] config | {
+    "redirect_uri": "http:\/\/localhost\/octoart_php\/google_callback.php",
+    "app_url": "https\/\/localhost\/octoart",
+    "has_client_id": true,
+    "has_secret": true,
+    "client_id_prefix": "179150202497-r7cdrp6…",
+    "session_state": "4fe0addb…",
+    "got_state": "4fe0addb…"
+}
+[2026-10-02 16:06:35] token_request | {
+    "url": "https:\/\/oauth2.googleapis.com\/token",
+    "redirect_uri": "http:\/\/localhost\/octoart_php\/google_callback.php"
+}
+[2026-10-02 16:06:35] token_response | {
+    "http_ok": true,
+    "http_code": 200,
+    "error": "",
+    "body": {
+        "access_token": "ya29.a0AX07CmvNUjTaKY-PMso6UFeJdBZzQBmfDrsyT8whwDt0lQe9QUj1zjJ79oVUzc0bEOK8Y22R1P6TSpr2RL6oWDlFc8YPbbwZc2x08vF-yINaUo1bulvpT0ipcTuV7cpYn8NTRuJIfekWEW-9KqiO5oIsHyCpH3zmxfcSGCy_0DvcXxFerp8cluMTzx2R5vIiDR_fTrRZu1ASlReOX0qRH8GqDVtqAu-LRJuFfduAzgPan_o7WwtSCCr7CJVDkPYJhOwMRIc-jBuamUfvsUk0cjUjsEHXaCgYKAV4SARISFQHGX2MieBAks-GLtsp7LQ3Ib6rgiA0291",
+        "expires_in": 3599,
+        "scope": "openid https:\/\/www.googleapis.com\/auth\/userinfo.email https:\/\/www.googleapis.com\/auth\/userinfo.profile",
+        "token_type": "Bearer",
+        "id_token": "eyJhbGciOiJSUzI1NiIsImtpZCI6Ijk0M2EzYTVkN2Q5MTk2MjVhNDU0ZTQ4OWI3NWMyOWFkYWI1N2FjYmEiLCJ0eXAiOiJKV1QifQ.eyJpc3MiOiJodHRwczovL2FjY291bnRzLmdvb2dsZS5jb20iLCJhenAiOiIxNzkxNTAyMDI0OTctcjdjZHJwNjc4YnFxYmhkcnE0dXQ4M3M3MzdpZ3Mzcm4uYXBwcy5nb29nbGV1c2VyY29udGVudC5jb20iLCJhdWQiOiIxNzkxNTAyMDI0OTctcjdjZHJwNjc4YnFxYmhkcnE0dXQ4M3M3MzdpZ3Mzcm4uYXBwcy5nb29nbGV1c2VyY29udGVudC5jb20iLCJzdWIiOiIxMDUyMDE0MTY2MjMxMDA2OTY0ODQiLCJoZCI6ImVzdHVkYW50ZS5zZWQuc2MuZ292LmJyIiwiZW1haWwiOiI0NTU0Mjk2NDIyQGVzdHVkYW50ZS5zZWQuc2MuZ292LmJyIiwiZW1haWxfdmVyaWZpZWQiOnRydWUsImF0X2hhc2giOiJJQmFvaVQzbG1Cd1gwRXk3U3F2LXl3IiwibmFtZSI6IkFORFJJRUxJIENSSVNUSU5FIEpPVkVOQ0lPIERBIFNJTFZBIiwicGljdHVyZSI6Imh0dHBzOi8vbGgzLmdvb2dsZXVzZXJjb250ZW50LmNvbS9hL0FDZzhvY0xfNzRUZDNhZzlXVUpJMjhzREVtZ1BYeU1RTmRub2RLWURmU0xoT1RQY2pWbnMyZ0ppPXM5Ni1jIiwiZ2l2ZW5fbmFtZSI6IkFORFJJRUxJIiwiZmFtaWx5X25hbWUiOiJDUklTVElORSBKT1ZFTkNJTyBEQSBTSUxWQSIsImlhdCI6MTc5MDk0OTk5OCwiZXhwIjoxNzkwOTUzNTk4fQ.hBJZfwSr9UDScXCkaI6GGBx-399IKOXJ-S79xw1NNETJo0OSf061i48YeInzEilK4C8qqMDgBJmsxl_7WX2G2hqh7qK2vb0NuLFF4ZUnrzAGpuC3ZNjeqMPoL2RzOr4gLZbPgdz-Q9TNu5tZMjl1_HFEfYaT-Fd5PyJRtk84TQtb0cOb8bo2TaaIJ9r3kE51XOL-U32chdSOs9s5yY4BDVO7pRXIcsOAALAaTMSUbF7gzc7Ky05NAM_8JttoJqV_tE8A49hi1-FswARvpjivNCojPWtPm53AuXAOzQqBJKM_3tJ6k_MlaGVWxofnzYbWeGYp78_ZHFtw-B-KQfsS-A"
+    }
+}
+[2026-10-02 16:06:35] userinfo | {
+    "id": "105201416623100696484",
+    "email": "4554296422@estudante.sed.sc.gov.br",
+    "verified_email": true,
+    "name": "ANDRIELI CRISTINE JOVENCIO DA SILVA",
+    "given_name": "ANDRIELI",
+    "family_name": "CRISTINE JOVENCIO DA SILVA",
+    "picture": "https:\/\/lh3.googleusercontent.com\/a\/ACg8ocL_74Td3ag9WUJI28sDEmgPXyMQNdnodKYDfSLhOTPcjVns2gJi=s96-c",
+    "hd": "estudante.sed.sc.gov.br"
+}
+[2026-10-02 16:06:35] user_linked | {
+    "id": 11,
+    "email": "4554296422@estudante.sed.sc.gov.br"
+}
+[2026-10-02 16:06:37] mail | {
+    "to": "4554296422@estudante.sed.sc.gov.br",
+    "ok": true,
+    "isNew": false
+}
+[2026-10-02 16:10:07] AUTH_START redirect_uri=http://localhost/octoart_php/google_callback.php
+[2026-10-02 16:10:12] === CALLBACK START ===
+[2026-10-02 16:10:12] GET | {
+    "state": "52cc1124ba917b9bf465139a112d23da",
+    "iss": "https:\/\/accounts.google.com",
+    "code": "4\/0AXlqoi5xdiiLdJ-NMc3Biftx4FFQuFbBaUn0XzGzBkcpEx1l-9su_vbRx4V2tDsq0H38og",
+    "scope": "email profile https:\/\/www.googleapis.com\/auth\/userinfo.email https:\/\/www.googleapis.com\/auth\/userinfo.profile openid",
+    "authuser": "1",
+    "hd": "estudante.sed.sc.gov.br",
+    "prompt": "none"
+}
+[2026-10-02 16:10:12] SESSION_keys | [
+    "google_oauth_state",
+    "google_redirect_uri"
+]
+[2026-10-02 16:10:12] config | {
+    "redirect_uri": "http:\/\/localhost\/octoart_php\/google_callback.php",
+    "app_url": "https\/\/localhost\/octoart",
+    "has_client_id": true,
+    "has_secret": true,
+    "client_id_prefix": "179150202497-r7cdrp6…",
+    "session_state": "52cc1124…",
+    "got_state": "52cc1124…"
+}
+[2026-10-02 16:10:12] token_request | {
+    "url": "https:\/\/oauth2.googleapis.com\/token",
+    "redirect_uri": "http:\/\/localhost\/octoart_php\/google_callback.php"
+}
+[2026-10-02 16:10:12] token_response | {
+    "http_ok": true,
+    "http_code": 200,
+    "error": "",
+    "body": {
+        "access_token": "ya29.a0AX07CmvX3pO_Es3gplpZRpSuXN3DqGz8kSDn-EaEJxsIsEVDwzw9KjY3AyLYT7Pc5Ngzzq09ox2rBUizzUJBDIwtRMNVm4jHjRyYxUIo6jNRKolfDMO_kwiAz05te12arH2XHfvup1d5QhVrkhXFTdn4Ha7TlqXKbnrunM95B7Xf6fAX8_RWrvam4E4APulVPTsTwjbsckUGRn6U0ow-WGiCVaFq22Jxi-DgttX0mLqmnVnmMZyAWtk8-gKJxLFC5-vjWKIk8qI6U4kYBf_SoQomDfEQLAaCgYKAakSARISFQHGX2Mi7xMquRF5SWl-Bqr4A9HROg0293",
+        "expires_in": 3598,
+        "scope": "https:\/\/www.googleapis.com\/auth\/userinfo.email https:\/\/www.googleapis.com\/auth\/userinfo.profile openid",
+        "token_type": "Bearer",
+        "id_token": "eyJhbGciOiJSUzI1NiIsImtpZCI6Ijk0M2EzYTVkN2Q5MTk2MjVhNDU0ZTQ4OWI3NWMyOWFkYWI1N2FjYmEiLCJ0eXAiOiJKV1QifQ.eyJpc3MiOiJodHRwczovL2FjY291bnRzLmdvb2dsZS5jb20iLCJhenAiOiIxNzkxNTAyMDI0OTctcjdjZHJwNjc4YnFxYmhkcnE0dXQ4M3M3MzdpZ3Mzcm4uYXBwcy5nb29nbGV1c2VyY29udGVudC5jb20iLCJhdWQiOiIxNzkxNTAyMDI0OTctcjdjZHJwNjc4YnFxYmhkcnE0dXQ4M3M3MzdpZ3Mzcm4uYXBwcy5nb29nbGV1c2VyY29udGVudC5jb20iLCJzdWIiOiIxMDUyMDE0MTY2MjMxMDA2OTY0ODQiLCJoZCI6ImVzdHVkYW50ZS5zZWQuc2MuZ292LmJyIiwiZW1haWwiOiI0NTU0Mjk2NDIyQGVzdHVkYW50ZS5zZWQuc2MuZ292LmJyIiwiZW1haWxfdmVyaWZpZWQiOnRydWUsImF0X2hhc2giOiJleWdDUUFoVWpjU0swNWc2WkZMbXNBIiwibmFtZSI6IkFORFJJRUxJIENSSVNUSU5FIEpPVkVOQ0lPIERBIFNJTFZBIiwicGljdHVyZSI6Imh0dHBzOi8vbGgzLmdvb2dsZXVzZXJjb250ZW50LmNvbS9hL0FDZzhvY0xfNzRUZDNhZzlXVUpJMjhzREVtZ1BYeU1RTmRub2RLWURmU0xoT1RQY2pWbnMyZ0ppPXM5Ni1jIiwiZ2l2ZW5fbmFtZSI6IkFORFJJRUxJIiwiZmFtaWx5X25hbWUiOiJDUklTVElORSBKT1ZFTkNJTyBEQSBTSUxWQSIsImlhdCI6MTc5MDk1MDIxNiwiZXhwIjoxNzkwOTUzODE2fQ.Sh2RHVb_Dw0kfyDpTjOuv0ZM_dl6M1BspxwXtXKqGN9wvGoRMvh9hSbQD2jc1M9HinxX-8ixbML7BRgIchtVfFW3kGyjolv-ouV2t4NLOtqvKJF9_8ILraz1VIrdqStQbTZBmaONV6zsaAWTrChinVkfMVaXvbW2pngsyzfSIsL7XcpZ3bHgfHAwQXNXxD1jGq4yrgGXL6QQWPbz7Raw_mWu-nAGfkf_4Gff2rftYCnMuzRBLUZDNF_9gqcPnHp89gTDNfnIlcLjT2QIncOAwMgg_aC34xrW4TWYGEFLrrWG5wVH3ghyMGW-XObBwk-sw5pczJnfqO6Hduwn_FCa4A"
+    }
+}
+[2026-10-02 16:10:13] userinfo | {
+    "id": "105201416623100696484",
+    "email": "4554296422@estudante.sed.sc.gov.br",
+    "verified_email": true,
+    "name": "ANDRIELI CRISTINE JOVENCIO DA SILVA",
+    "given_name": "ANDRIELI",
+    "family_name": "CRISTINE JOVENCIO DA SILVA",
+    "picture": "https:\/\/lh3.googleusercontent.com\/a\/ACg8ocL_74Td3ag9WUJI28sDEmgPXyMQNdnodKYDfSLhOTPcjVns2gJi=s96-c",
+    "hd": "estudante.sed.sc.gov.br"
+}
+[2026-10-02 16:10:13] user_linked | {
+    "id": 11,
+    "email": "4554296422@estudante.sed.sc.gov.br"
+}
+[2026-10-02 16:10:15] mail | {
+    "to": "4554296422@estudante.sed.sc.gov.br",
+    "ok": true,
+    "isNew": false
+}
+[2026-10-02 16:14:07] AUTH_START redirect_uri=http://localhost/octoart_php/google_callback.php
+[2026-10-02 16:14:14] === CALLBACK START ===
+[2026-10-02 16:14:14] GET | {
+    "state": "f8e22f850c74f5ed5e7187d00dba4daa",
+    "iss": "https:\/\/accounts.google.com",
+    "code": "4\/0AXlqoi5cbNlC0R8QhroPCntESaC5d7dsk48jC2tN_8W_kCRZyWBpFkeuvwXgWqOWopBPwA",
+    "scope": "email profile https:\/\/www.googleapis.com\/auth\/userinfo.email https:\/\/www.googleapis.com\/auth\/userinfo.profile openid",
+    "authuser": "1",
+    "hd": "estudante.sed.sc.gov.br",
+    "prompt": "none"
+}
+[2026-10-02 16:14:14] SESSION_keys | [
+    "google_oauth_state",
+    "google_redirect_uri"
+]
+[2026-10-02 16:14:14] config | {
+    "redirect_uri": "http:\/\/localhost\/octoart_php\/google_callback.php",
+    "app_url": "http:\/\/localhost\/octoart_php",
+    "has_client_id": true,
+    "has_secret": true,
+    "client_id_prefix": "179150202497-r7cdrp6…",
+    "session_state": "f8e22f85…",
+    "got_state": "f8e22f85…"
+}
+[2026-10-02 16:14:14] token_request | {
+    "url": "https:\/\/oauth2.googleapis.com\/token",
+    "redirect_uri": "http:\/\/localhost\/octoart_php\/google_callback.php"
+}
+[2026-10-02 16:14:14] token_response | {
+    "http_ok": true,
+    "http_code": 200,
+    "error": "",
+    "body": {
+        "access_token": "ya29.a0AX07CmsWlrKNi7HoXDPYYp5Dk2Bhht1GHAaNS_O7l0Mnc8F6araTVy0gT0b7beSyLtYBftJXzq7xm1MWlC_2Bt2UhxQdFnWbLE-r-NGFYxpp8haJtLFULhpjFzfWM7ts0_N6RMNiUFDJVfXM2Mua_rdPPi4azaNupS1KugP8ifSUxnWmDzfW2QpICcMucGhKTqtCiw3n-Ay2NfB4EHHB407RaIuVN0TcXFdTeYs-f1jfD8Lc3yIdak3obGoHK-YnGbppN8xcjiY7F7ie04Q5480ULuxovAaCgYKAR0SARISFQHGX2Mi7kDsCF1JBRmk27ySZdawHA0293",
+        "expires_in": 3598,
+        "scope": "https:\/\/www.googleapis.com\/auth\/userinfo.email https:\/\/www.googleapis.com\/auth\/userinfo.profile openid",
+        "token_type": "Bearer",
+        "id_token": "eyJhbGciOiJSUzI1NiIsImtpZCI6Ijk0M2EzYTVkN2Q5MTk2MjVhNDU0ZTQ4OWI3NWMyOWFkYWI1N2FjYmEiLCJ0eXAiOiJKV1QifQ.eyJpc3MiOiJodHRwczovL2FjY291bnRzLmdvb2dsZS5jb20iLCJhenAiOiIxNzkxNTAyMDI0OTctcjdjZHJwNjc4YnFxYmhkcnE0dXQ4M3M3MzdpZ3Mzcm4uYXBwcy5nb29nbGV1c2VyY29udGVudC5jb20iLCJhdWQiOiIxNzkxNTAyMDI0OTctcjdjZHJwNjc4YnFxYmhkcnE0dXQ4M3M3MzdpZ3Mzcm4uYXBwcy5nb29nbGV1c2VyY29udGVudC5jb20iLCJzdWIiOiIxMDUyMDE0MTY2MjMxMDA2OTY0ODQiLCJoZCI6ImVzdHVkYW50ZS5zZWQuc2MuZ292LmJyIiwiZW1haWwiOiI0NTU0Mjk2NDIyQGVzdHVkYW50ZS5zZWQuc2MuZ292LmJyIiwiZW1haWxfdmVyaWZpZWQiOnRydWUsImF0X2hhc2giOiI2anVVOGJUa2dYVGNFNlpSUzE4QVJ3IiwibmFtZSI6IkFORFJJRUxJIENSSVNUSU5FIEpPVkVOQ0lPIERBIFNJTFZBIiwicGljdHVyZSI6Imh0dHBzOi8vbGgzLmdvb2dsZXVzZXJjb250ZW50LmNvbS9hL0FDZzhvY0xfNzRUZDNhZzlXVUpJMjhzREVtZ1BYeU1RTmRub2RLWURmU0xoT1RQY2pWbnMyZ0ppPXM5Ni1jIiwiZ2l2ZW5fbmFtZSI6IkFORFJJRUxJIiwiZmFtaWx5X25hbWUiOiJDUklTVElORSBKT1ZFTkNJTyBEQSBTSUxWQSIsImlhdCI6MTc5MDk1MDQ1OCwiZXhwIjoxNzkwOTU0MDU4fQ.GWR1FUWJuyMCEvzH5xJeUvoOVVjXtjznnEQbQ981E01YwOXdqcIwMOPCMrLzJ8LqAuCAIKDjHH0A0eXBtf2sq46YQX0pWLGOtcB8KYBdy3RO23e3fW7QOpuHa318ip2n7lVEFhS59gzlSArsMWuZCjC5COiYCWIu9F73R-OsuIpLmx9lp0YqhyCumfuKBS1yzcpNyJjNMJu5Q3SddkGkKIto-oWm0mIpe3j0zNCbe9iPwf8pf1RGki5KX3GuIwLzu79NZSy5IvQQ2jzthkOpn6kIPWwrrXe7yWVqFOEZB6Gz1ZL-68_WCoDsMwSzWMy4a7DOlCXJcfUEc_7XY40IpQ"
+    }
+}
+[2026-10-02 16:14:15] userinfo | {
+    "id": "105201416623100696484",
+    "email": "4554296422@estudante.sed.sc.gov.br",
+    "verified_email": true,
+    "name": "ANDRIELI CRISTINE JOVENCIO DA SILVA",
+    "given_name": "ANDRIELI",
+    "family_name": "CRISTINE JOVENCIO DA SILVA",
+    "picture": "https:\/\/lh3.googleusercontent.com\/a\/ACg8ocL_74Td3ag9WUJI28sDEmgPXyMQNdnodKYDfSLhOTPcjVns2gJi=s96-c",
+    "hd": "estudante.sed.sc.gov.br"
+}
+[2026-10-02 16:14:15] user_linked | {
+    "id": 11,
+    "email": "4554296422@estudante.sed.sc.gov.br"
+}
+[2026-10-02 16:14:17] mail | {
+    "to": "4554296422@estudante.sed.sc.gov.br",
+    "ok": true,
+    "isNew": false
+}
+[2026-10-02 16:15:13] AUTH_START redirect_uri=http://localhost/octoart_php/google_callback.php
+[2026-10-02 16:15:29] AUTH_START redirect_uri=http://localhost/octoart_php/index.php
+[2026-10-02 16:16:37] AUTH_START redirect_uri=http://localhost/octoart_php/google_callback.php
+[2026-10-02 16:16:42] === CALLBACK START ===
+[2026-10-02 16:16:42] GET | {
+    "state": "6931141efca261df4526d3171b9d89fd",
+    "iss": "https:\/\/accounts.google.com",
+    "code": "4\/0AXlqoi6tyFUZLpZfr_JUBmX5mfKVm4mSw1CKlGW8YLz1WmN2Z7q-Oj99i-jEy-w7vqBHXQ",
+    "scope": "email profile https:\/\/www.googleapis.com\/auth\/userinfo.profile openid https:\/\/www.googleapis.com\/auth\/userinfo.email",
+    "authuser": "1",
+    "hd": "estudante.sed.sc.gov.br",
+    "prompt": "none"
+}
+[2026-10-02 16:16:42] SESSION_keys | [
+    "google_oauth_state",
+    "google_redirect_uri"
+]
+[2026-10-02 16:16:42] config | {
+    "redirect_uri": "http:\/\/localhost\/octoart_php\/google_callback.php",
+    "app_url": "http:\/\/localhost\/octoart_php",
+    "has_client_id": true,
+    "has_secret": true,
+    "client_id_prefix": "179150202497-r7cdrp6…",
+    "session_state": "6931141e…",
+    "got_state": "6931141e…"
+}
+[2026-10-02 16:16:42] token_request | {
+    "url": "https:\/\/oauth2.googleapis.com\/token",
+    "redirect_uri": "http:\/\/localhost\/octoart_php\/google_callback.php"
+}
+[2026-10-02 16:16:42] token_response | {
+    "http_ok": true,
+    "http_code": 200,
+    "error": "",
+    "body": {
+        "access_token": "ya29.a0AX07CmsnvXm3jXtmct7KKVDk1ntPaN1RJyJFUiJGyG9tRMtaXFG6Y5HAMyXkjdu1U1ewVC4Hgu8Lqzh2uq8yDBsirXeUpt5Rhykx7tPn250eLh5mJDCHqZT3xrVbJDzD2ow-E9GN6cW6cLIzp918Q92x-zimmlc9xjZ_tErUD-IB3xcJioANJ5u1SzmbrdQY-f_n4XMaaXE3PU0-9evcpHPNdMNASwZV6iWXmFtI_URUe8w6v3lk-VL4aGLVt-ftyLaAToMVNhY8yrUYLxDiGPr_eoiuxgaCgYKATwSARISFQHGX2MiVAlJRltKAQ3A8CxEFbW1cQ0293",
+        "expires_in": 3599,
+        "scope": "openid https:\/\/www.googleapis.com\/auth\/userinfo.profile https:\/\/www.googleapis.com\/auth\/userinfo.email",
+        "token_type": "Bearer",
+        "id_token": "eyJhbGciOiJSUzI1NiIsImtpZCI6Ijk0M2EzYTVkN2Q5MTk2MjVhNDU0ZTQ4OWI3NWMyOWFkYWI1N2FjYmEiLCJ0eXAiOiJKV1QifQ.eyJpc3MiOiJodHRwczovL2FjY291bnRzLmdvb2dsZS5jb20iLCJhenAiOiIxNzkxNTAyMDI0OTctcjdjZHJwNjc4YnFxYmhkcnE0dXQ4M3M3MzdpZ3Mzcm4uYXBwcy5nb29nbGV1c2VyY29udGVudC5jb20iLCJhdWQiOiIxNzkxNTAyMDI0OTctcjdjZHJwNjc4YnFxYmhkcnE0dXQ4M3M3MzdpZ3Mzcm4uYXBwcy5nb29nbGV1c2VyY29udGVudC5jb20iLCJzdWIiOiIxMDUyMDE0MTY2MjMxMDA2OTY0ODQiLCJoZCI6ImVzdHVkYW50ZS5zZWQuc2MuZ292LmJyIiwiZW1haWwiOiI0NTU0Mjk2NDIyQGVzdHVkYW50ZS5zZWQuc2MuZ292LmJyIiwiZW1haWxfdmVyaWZpZWQiOnRydWUsImF0X2hhc2giOiJVRUE4dkc1ZjhrWmxTRkt1N2xUenhnIiwibmFtZSI6IkFORFJJRUxJIENSSVNUSU5FIEpPVkVOQ0lPIERBIFNJTFZBIiwicGljdHVyZSI6Imh0dHBzOi8vbGgzLmdvb2dsZXVzZXJjb250ZW50LmNvbS9hL0FDZzhvY0xfNzRUZDNhZzlXVUpJMjhzREVtZ1BYeU1RTmRub2RLWURmU0xoT1RQY2pWbnMyZ0ppPXM5Ni1jIiwiZ2l2ZW5fbmFtZSI6IkFORFJJRUxJIiwiZmFtaWx5X25hbWUiOiJDUklTVElORSBKT1ZFTkNJTyBEQSBTSUxWQSIsImlhdCI6MTc5MDk1MDYwNSwiZXhwIjoxNzkwOTU0MjA1fQ.SpyQJ2ulh_B3Y3oMiJlljzIa_JHe5THzq1QQx_l557LzLualZmPi3S9iBvk3vtF9MJ2-U3JhpxWN-IKfU5kmuDGWHy1hfFdb7oy6Dvb-IuS3v2hnrxEP7hXJJvtjen5FYQpiyeQJ_0yi3P7dg8nWRLiaw8yhFYtzaCkmcrJYRCkBLj91bMqInwz7ZaJAJi98G42-3pq5urCVcGeLvk7otaEEsIbqHDYOyIeQRkCtFVXVfL5B4V-70NTWz9zch7nDePlou5METInfZ9NhJ6KF1HXlD25iOpuYTgwlWhEMze3v-T06hfpJ-e1n3pIVEgRKRnfKNlUWclurPEfXCoOXjA"
+    }
+}
+[2026-10-02 16:16:43] userinfo | {
+    "id": "105201416623100696484",
+    "email": "4554296422@estudante.sed.sc.gov.br",
+    "verified_email": true,
+    "name": "ANDRIELI CRISTINE JOVENCIO DA SILVA",
+    "given_name": "ANDRIELI",
+    "family_name": "CRISTINE JOVENCIO DA SILVA",
+    "picture": "https:\/\/lh3.googleusercontent.com\/a\/ACg8ocL_74Td3ag9WUJI28sDEmgPXyMQNdnodKYDfSLhOTPcjVns2gJi=s96-c",
+    "hd": "estudante.sed.sc.gov.br"
+}
+[2026-10-02 16:16:43] user_linked | {
+    "id": 11,
+    "email": "4554296422@estudante.sed.sc.gov.br"
+}
+[2026-10-02 16:16:45] mail | {
+    "to": "4554296422@estudante.sed.sc.gov.br",
+    "ok": true,
+    "isNew": false
+}
+[2026-10-02 16:18:38] AUTH_START redirect_uri=http://localhost/octoart_php/google_callback.php
+[2026-10-02 16:18:43] === CALLBACK START ===
+[2026-10-02 16:18:43] GET | {
+    "state": "5c0e84c049ab516f70ce9168f1794383",
+    "iss": "https:\/\/accounts.google.com",
+    "code": "4\/0AXlqoi5AWDqM1jOmuyJBZ8K62ZAzFsaKcriW1RmlWN-Hx-sY1X3UHO58JZMC_kiKDexIRg",
+    "scope": "email profile https:\/\/www.googleapis.com\/auth\/userinfo.profile https:\/\/www.googleapis.com\/auth\/userinfo.email openid",
+    "authuser": "1",
+    "hd": "estudante.sed.sc.gov.br",
+    "prompt": "none"
+}
+[2026-10-02 16:18:43] SESSION_keys | [
+    "google_oauth_state",
+    "google_redirect_uri"
+]
+[2026-10-02 16:18:43] config | {
+    "redirect_uri": "http:\/\/localhost\/octoart_php\/google_callback.php",
+    "app_url": "http:\/\/localhost\/octoart_php",
+    "has_client_id": true,
+    "has_secret": true,
+    "client_id_prefix": "179150202497-r7cdrp6…",
+    "session_state": "5c0e84c0…",
+    "got_state": "5c0e84c0…"
+}
+[2026-10-02 16:18:43] token_request | {
+    "url": "https:\/\/oauth2.googleapis.com\/token",
+    "redirect_uri": "http:\/\/localhost\/octoart_php\/google_callback.php"
+}
+[2026-10-02 16:18:43] token_response | {
+    "http_ok": true,
+    "http_code": 200,
+    "error": "",
+    "body": {
+        "access_token": "ya29.a0AX07Cms2zQtEC-lFfhkqOocgchSC7zJQQaIFmhntQQtXiDZczKwQzyXHvayZPI8kRnkxhC-DPCJYog8qrM7IqOUGofCIS7nV_N-K3bKvL51x3ZL7HI_6JUx8j8hN0QepgsgjiZA9n993C_h2dmmBDQYEjzqIe1nC7z_kLS0moBBrs2HAZ_X34HA1epcC40F-nphqnTn2VC-G9PRJeNn0chuNUXvM3qndM2kP3yv98JfMMedSh4WpJm1iImp45MgTYDfWnyllMD30fDdKQJTAy3GhKHOGaCgYKAZASARISFQHGX2Mik-j_0ZDQcL75GcG20jm1wQ0291",
+        "expires_in": 3599,
+        "scope": "openid https:\/\/www.googleapis.com\/auth\/userinfo.email https:\/\/www.googleapis.com\/auth\/userinfo.profile",
+        "token_type": "Bearer",
+        "id_token": "eyJhbGciOiJSUzI1NiIsImtpZCI6Ijk0M2EzYTVkN2Q5MTk2MjVhNDU0ZTQ4OWI3NWMyOWFkYWI1N2FjYmEiLCJ0eXAiOiJKV1QifQ.eyJpc3MiOiJodHRwczovL2FjY291bnRzLmdvb2dsZS5jb20iLCJhenAiOiIxNzkxNTAyMDI0OTctcjdjZHJwNjc4YnFxYmhkcnE0dXQ4M3M3MzdpZ3Mzcm4uYXBwcy5nb29nbGV1c2VyY29udGVudC5jb20iLCJhdWQiOiIxNzkxNTAyMDI0OTctcjdjZHJwNjc4YnFxYmhkcnE0dXQ4M3M3MzdpZ3Mzcm4uYXBwcy5nb29nbGV1c2VyY29udGVudC5jb20iLCJzdWIiOiIxMDUyMDE0MTY2MjMxMDA2OTY0ODQiLCJoZCI6ImVzdHVkYW50ZS5zZWQuc2MuZ292LmJyIiwiZW1haWwiOiI0NTU0Mjk2NDIyQGVzdHVkYW50ZS5zZWQuc2MuZ292LmJyIiwiZW1haWxfdmVyaWZpZWQiOnRydWUsImF0X2hhc2giOiIzT1hWSzhQQko1dllMdElzU3VFM1NRIiwibmFtZSI6IkFORFJJRUxJIENSSVNUSU5FIEpPVkVOQ0lPIERBIFNJTFZBIiwicGljdHVyZSI6Imh0dHBzOi8vbGgzLmdvb2dsZXVzZXJjb250ZW50LmNvbS9hL0FDZzhvY0xfNzRUZDNhZzlXVUpJMjhzREVtZ1BYeU1RTmRub2RLWURmU0xoT1RQY2pWbnMyZ0ppPXM5Ni1jIiwiZ2l2ZW5fbmFtZSI6IkFORFJJRUxJIiwiZmFtaWx5X25hbWUiOiJDUklTVElORSBKT1ZFTkNJTyBEQSBTSUxWQSIsImlhdCI6MTc5MDk1MDcyNiwiZXhwIjoxNzkwOTU0MzI2fQ.ddguODzJtn11RkC6GPL9dSqtOH-F54N3CjUFQcPw8FTLZ39O0iZVmzLDQ_TkirS1UFeihcPHzg-1dSCgf9BFOavw0RoOgsgDohVipqYu28BGhFMzB0b3U1Os__rDm5_P51PFSxolQ8IqeoRLt2LlbC50XBArYSi9AoKwc7DIea8ag5TujIChYvY3ofyB7txtQGWIcfZq3GravkuI0gz1EiCBJiKekuu0929i4ZB122Q6rYC8qOHB9KXVe7GapHIUu1Dv11HGo6vzdxAON9H3GyEUszQUMBUpyefoQNdjQJFs45oGnj3jLOR_87z6xOsFZseskqtwvzBy3gRdZrv5jQ"
+    }
+}
+[2026-10-02 16:18:44] userinfo | {
+    "id": "105201416623100696484",
+    "email": "4554296422@estudante.sed.sc.gov.br",
+    "verified_email": true,
+    "name": "ANDRIELI CRISTINE JOVENCIO DA SILVA",
+    "given_name": "ANDRIELI",
+    "family_name": "CRISTINE JOVENCIO DA SILVA",
+    "picture": "https:\/\/lh3.googleusercontent.com\/a\/ACg8ocL_74Td3ag9WUJI28sDEmgPXyMQNdnodKYDfSLhOTPcjVns2gJi=s96-c",
+    "hd": "estudante.sed.sc.gov.br"
+}
+[2026-10-02 16:18:44] user_linked | {
+    "id": 11,
+    "email": "4554296422@estudante.sed.sc.gov.br"
+}
+[2026-10-02 16:18:46] mail | {
+    "to": "4554296422@estudante.sed.sc.gov.br",
+    "ok": true,
+    "isNew": false
+}
+[2026-10-05 12:56:05] AUTH_START redirect_uri=http://localhost/octoart_php/google_callback.php
+[2026-10-05 12:56:13] === CALLBACK START ===
+[2026-10-05 12:56:13] GET | {
+    "state": "2c6b2866f9b1ddc05b6fc3b824754d6c",
+    "iss": "https:\/\/accounts.google.com",
+    "code": "4\/0AXlqoi4qGMDDojLcGCBQftZR-7Xx1uAEx8QnYGgiFJD3MkCF4JJjm-n3eqgdegETQ8GHcw",
+    "scope": "email profile https:\/\/www.googleapis.com\/auth\/userinfo.profile https:\/\/www.googleapis.com\/auth\/userinfo.email openid",
+    "authuser": "0",
+    "hd": "estudante.sed.sc.gov.br",
+    "prompt": "consent"
+}
+[2026-10-05 12:56:13] SESSION_keys | [
+    "google_oauth_state",
+    "google_redirect_uri"
+]
+[2026-10-05 12:56:13] config | {
+    "redirect_uri": "http:\/\/localhost\/octoart_php\/google_callback.php",
+    "app_url": "http:\/\/localhost\/octoart_php",
+    "has_client_id": true,
+    "has_secret": true,
+    "client_id_prefix": "179150202497-r7cdrp6…",
+    "session_state": "2c6b2866…",
+    "got_state": "2c6b2866…"
+}
+[2026-10-05 12:56:13] token_request | {
+    "url": "https:\/\/oauth2.googleapis.com\/token",
+    "redirect_uri": "http:\/\/localhost\/octoart_php\/google_callback.php"
+}
+[2026-10-05 12:56:13] token_response | {
+    "http_ok": true,
+    "http_code": 200,
+    "error": "",
+    "body": {
+        "access_token": "ya29.a0AX07CmvuwvLe1VNcQvotOxIWoJI7JMWA1kDrGWGV57Wo3U1bi8iIdhOy3NUQbsEo8NWlrp3MGopej2cKF0g6-3q01M13e3ZRnp3Y2NQh0RuUJRQ0YIG-MvRP3QWmtEJHgwz9xJdRpmB98tsJk8jH3r3YEz5HlKAQRvDL1jGFFGCk5-4OymqY4U8jP6s98RBhLj_2NM8aCgYKAXUSARESFQHGX2MiIwCdCBgHZ439qjXKNlg5gA0206",
+        "expires_in": 3599,
+        "scope": "https:\/\/www.googleapis.com\/auth\/userinfo.profile https:\/\/www.googleapis.com\/auth\/userinfo.email openid",
+        "token_type": "Bearer",
+        "id_token": "eyJhbGciOiJSUzI1NiIsImtpZCI6Ijk0M2EzYTVkN2Q5MTk2MjVhNDU0ZTQ4OWI3NWMyOWFkYWI1N2FjYmEiLCJ0eXAiOiJKV1QifQ.eyJpc3MiOiJodHRwczovL2FjY291bnRzLmdvb2dsZS5jb20iLCJhenAiOiIxNzkxNTAyMDI0OTctcjdjZHJwNjc4YnFxYmhkcnE0dXQ4M3M3MzdpZ3Mzcm4uYXBwcy5nb29nbGV1c2VyY29udGVudC5jb20iLCJhdWQiOiIxNzkxNTAyMDI0OTctcjdjZHJwNjc4YnFxYmhkcnE0dXQ4M3M3MzdpZ3Mzcm4uYXBwcy5nb29nbGV1c2VyY29udGVudC5jb20iLCJzdWIiOiIxMTIxMzE4NjM0MzY3OTQ0MDQ4NTciLCJoZCI6ImVzdHVkYW50ZS5zZWQuc2MuZ292LmJyIiwiZW1haWwiOiI0NTUzNDU3MDIzQGVzdHVkYW50ZS5zZWQuc2MuZ292LmJyIiwiZW1haWxfdmVyaWZpZWQiOnRydWUsImF0X2hhc2giOiJCNFZnSktocWp5QjJmODFWMjE5Ym5RIiwibmFtZSI6IktBVUFOIEJJQU5DSElOSSBFU1RFVkFNIiwicGljdHVyZSI6Imh0dHBzOi8vbGgzLmdvb2dsZXVzZXJjb250ZW50LmNvbS9hL0FDZzhvY0tGNU1teURfeGVwOEc0NnRDVm1OM0hVT1RGV3VLUTA5MElfUUZvZktlUWdCdHVzTms9czk2LWMiLCJnaXZlbl9uYW1lIjoiS0FVQU4iLCJmYW1pbHlfbmFtZSI6IkJJQU5DSElOSSBFU1RFVkFNIiwiaWF0IjoxNzkxMTk3NzczLCJleHAiOjE3OTEyMDEzNzN9.jm8WzKJi5R21yR8mzTNTAJjUBGvx6fWT6mNUR8OC337HEnVAlymPOwZvVm8aL8IiGqDPwj-eDpH9HAWMvyO9OhgYx5ZPQspK3DToxEsKaLfb86Z7gT5FeV7QjiOlr5yKrXZteWWMjy9op6bHpn_FloTkgS3aUvm_leGRN1VcnrFyAXzD5ZxQAxJbKgDCFDYdVsXro5BH0qJDX7McBLi0vMy5hbyttd-Do4AdmFnYJUyrsiz4CY0fk3Djla_4zNYSvre7Z8f_4-pZOkChmLPdTj-C2hdbUWM6Fiw4_V3zkddEHQR_g9sPxjAZeLkfp8IBJ6a9aFUUVFs0G6TWxkv7lA"
+    }
+}
+[2026-10-05 12:56:14] userinfo | {
+    "id": "112131863436794404857",
+    "email": "4553457023@estudante.sed.sc.gov.br",
+    "verified_email": true,
+    "name": "KAUAN BIANCHINI ESTEVAM",
+    "given_name": "KAUAN",
+    "family_name": "BIANCHINI ESTEVAM",
+    "picture": "https:\/\/lh3.googleusercontent.com\/a\/ACg8ocKF5MmyD_xep8G46tCVmN3HUOTFWuKQ090I_QFofKeQgBtusNk=s96-c",
+    "hd": "estudante.sed.sc.gov.br"
+}
+[2026-10-05 12:56:14] user_created | {
+    "id": 11,
+    "email": "4553457023@estudante.sed.sc.gov.br"
+}
+[2026-10-05 12:56:16] mail | {
+    "to": "4553457023@estudante.sed.sc.gov.br",
+    "ok": true,
+    "isNew": true
+}
+[2026-10-05 13:07:18] AUTH_START redirect_uri=http://localhost/octoart_php/google_callback.php
+[2026-10-05 13:07:23] === CALLBACK START ===
+[2026-10-05 13:07:23] GET | {
+    "state": "cf6887533d108ebf9c2ef909bee90fef",
+    "iss": "https:\/\/accounts.google.com",
+    "code": "4\/0AXlqoi4uuDlxhwTafMfL3ryHdASaeb-l0ZjYizQEKmBtc1Go6IZ8QaoqzQkWdy-mAo_Sgg",
+    "scope": "email profile https:\/\/www.googleapis.com\/auth\/userinfo.profile openid https:\/\/www.googleapis.com\/auth\/userinfo.email",
+    "authuser": "0",
+    "hd": "estudante.sed.sc.gov.br",
+    "prompt": "none"
+}
+[2026-10-05 13:07:23] SESSION_keys | [
+    "google_oauth_state",
+    "google_redirect_uri"
+]
+[2026-10-05 13:07:23] config | {
+    "redirect_uri": "http:\/\/localhost\/octoart_php\/google_callback.php",
+    "app_url": "http:\/\/localhost\/octoart_php",
+    "has_client_id": true,
+    "has_secret": true,
+    "client_id_prefix": "179150202497-r7cdrp6…",
+    "session_state": "cf688753…",
+    "got_state": "cf688753…"
+}
+[2026-10-05 13:07:23] token_request | {
+    "url": "https:\/\/oauth2.googleapis.com\/token",
+    "redirect_uri": "http:\/\/localhost\/octoart_php\/google_callback.php"
+}
+[2026-10-05 13:07:24] token_response | {
+    "http_ok": true,
+    "http_code": 200,
+    "error": "",
+    "body": {
+        "access_token": "ya29.a0AX07CmvIg3djrOXEHLOzajQ0X7mrieBPn6bKCpw6W-Aun3MNEfqjv_DJwIVTkoyTFD-D_r7ESlhRWd8U9rGN0aGUumhGlCzZ6nF10vpU86eJyK0YLfO4P8FGQObJZ-X4sW2MiR-6eeYa2YUZzFvOIwpOFi9YG6zUIskyq2F7oGKi5h9ZjbuxeEK9n0xmYHWPpviRaEv5soxL6Jufdm9ILf7na_WEnlt_6JLlyOsgzfq_5YgHIWuavWJb4vAS7pj59wZRvz_cZGBvn6tzAS0D4NSM7GGFqgaCgYKAWwSARESFQHGX2MijGdskcUMSZALcEj4unMsgw0293",
+        "expires_in": 3599,
+        "scope": "openid https:\/\/www.googleapis.com\/auth\/userinfo.email https:\/\/www.googleapis.com\/auth\/userinfo.profile",
+        "token_type": "Bearer",
+        "id_token": "eyJhbGciOiJSUzI1NiIsImtpZCI6Ijk0M2EzYTVkN2Q5MTk2MjVhNDU0ZTQ4OWI3NWMyOWFkYWI1N2FjYmEiLCJ0eXAiOiJKV1QifQ.eyJpc3MiOiJodHRwczovL2FjY291bnRzLmdvb2dsZS5jb20iLCJhenAiOiIxNzkxNTAyMDI0OTctcjdjZHJwNjc4YnFxYmhkcnE0dXQ4M3M3MzdpZ3Mzcm4uYXBwcy5nb29nbGV1c2VyY29udGVudC5jb20iLCJhdWQiOiIxNzkxNTAyMDI0OTctcjdjZHJwNjc4YnFxYmhkcnE0dXQ4M3M3MzdpZ3Mzcm4uYXBwcy5nb29nbGV1c2VyY29udGVudC5jb20iLCJzdWIiOiIxMTIxMzE4NjM0MzY3OTQ0MDQ4NTciLCJoZCI6ImVzdHVkYW50ZS5zZWQuc2MuZ292LmJyIiwiZW1haWwiOiI0NTUzNDU3MDIzQGVzdHVkYW50ZS5zZWQuc2MuZ292LmJyIiwiZW1haWxfdmVyaWZpZWQiOnRydWUsImF0X2hhc2giOiJaY0Q5X1lobGpYM3JmZ1dVVDhBS0lnIiwibmFtZSI6IktBVUFOIEJJQU5DSElOSSBFU1RFVkFNIiwicGljdHVyZSI6Imh0dHBzOi8vbGgzLmdvb2dsZXVzZXJjb250ZW50LmNvbS9hL0FDZzhvY0tGNU1teURfeGVwOEc0NnRDVm1OM0hVT1RGV3VLUTA5MElfUUZvZktlUWdCdHVzTms9czk2LWMiLCJnaXZlbl9uYW1lIjoiS0FVQU4iLCJmYW1pbHlfbmFtZSI6IkJJQU5DSElOSSBFU1RFVkFNIiwiaWF0IjoxNzkxMTk4NDQzLCJleHAiOjE3OTEyMDIwNDN9.AYkEiWbz2xAWHeiQuL9GHdaqrOkmCQEluy6-uaox3MInGlC5ax9ptcIRTVUuRkjo7ma8Rir8mK_BSs1rQ9EO2ypacgIgrCm6UwztR1J-0-sSivgM3pIlWtS_iTwFlIaNH9ezN3BMEgadusNL1i4_A0MtfP7L1w44vNTq1oBOXiVED3JqB5HiKIQkCx4DLoe6fhyxdbeKOSZrYJfG7UDDAMon029dcp4PawR4iz9AuxBDsMqCpwzk1aYR__PUUcGYq1HvYY0nG8eAzwMvYykyXrQmJ9BW-htbJ210AJYXfZ2EiMe7tJ26VmcKeKVSfpHI6MVRbqe9VRb2Misqc1m3Xg"
+    }
+}
+[2026-10-05 13:07:24] userinfo | {
+    "id": "112131863436794404857",
+    "email": "4553457023@estudante.sed.sc.gov.br",
+    "verified_email": true,
+    "name": "KAUAN BIANCHINI ESTEVAM",
+    "given_name": "KAUAN",
+    "family_name": "BIANCHINI ESTEVAM",
+    "picture": "https:\/\/lh3.googleusercontent.com\/a\/ACg8ocKF5MmyD_xep8G46tCVmN3HUOTFWuKQ090I_QFofKeQgBtusNk=s96-c",
+    "hd": "estudante.sed.sc.gov.br"
+}
+[2026-10-05 13:07:24] user_linked | {
+    "id": "11",
+    "email": "4553457023@estudante.sed.sc.gov.br"
+}
+[2026-10-05 13:07:26] mail | {
+    "to": "4553457023@estudante.sed.sc.gov.br",
+    "ok": true,
+    "isNew": false
+}
+[2026-10-05 13:10:30] AUTH_START redirect_uri=http://localhost/octoart_php/google_callback.php
+[2026-10-05 13:10:35] === CALLBACK START ===
+[2026-10-05 13:10:35] GET | {
+    "state": "e5243f0fa202e799ff2cc869de3fd5af",
+    "iss": "https:\/\/accounts.google.com",
+    "code": "4\/0AXlqoi5PPGp401P3dOXlUZahLE2VNVbdsw1hpM19PVXsWF3nn57kgtN-FlXG8WaixVIUeA",
+    "scope": "email profile https:\/\/www.googleapis.com\/auth\/userinfo.profile openid https:\/\/www.googleapis.com\/auth\/userinfo.email",
+    "authuser": "0",
+    "hd": "estudante.sed.sc.gov.br",
+    "prompt": "none"
+}
+[2026-10-05 13:10:35] SESSION_keys | [
+    "google_oauth_state",
+    "google_redirect_uri"
+]
+[2026-10-05 13:10:35] config | {
+    "redirect_uri": "http:\/\/localhost\/octoart_php\/google_callback.php",
+    "app_url": "http:\/\/localhost\/octoart_php",
+    "has_client_id": true,
+    "has_secret": true,
+    "client_id_prefix": "179150202497-r7cdrp6…",
+    "session_state": "e5243f0f…",
+    "got_state": "e5243f0f…"
+}
+[2026-10-05 13:10:35] token_request | {
+    "url": "https:\/\/oauth2.googleapis.com\/token",
+    "redirect_uri": "http:\/\/localhost\/octoart_php\/google_callback.php"
+}
+[2026-10-05 13:10:35] token_response | {
+    "http_ok": true,
+    "http_code": 200,
+    "error": "",
+    "body": {
+        "access_token": "ya29.a0AX07CmuUd3HHc-P5zzhEQUtP6mTXjBrQCLGbYKC4urBRnEzFPgI84M5oT2XPJmVZcERw60i0ugyGRdY_Md6hSLWeKzE-tVZhDR6XZuilWNX8JfuauGSjLcgeFB4HlsPJ-a_X1Z9Rn5SAzT54pqWoRTK9wEAzgtklKJUwg3jZG_3bdmuKavBuGqv5M0Tb4Zhl25kf5e3ljp4_aREP-6T0-xViBgx4xwE0FjgXYIj9jr6qsBAYiam-RtkKgmWoYARxAPrO8aw9TP0g_gzSkufJNxEU4Zw2eQaCgYKAagSARESFQHGX2MiSWgs_rlT_-h9s9q20AwcTw0293",
+        "expires_in": 3598,
+        "scope": "openid https:\/\/www.googleapis.com\/auth\/userinfo.email https:\/\/www.googleapis.com\/auth\/userinfo.profile",
+        "token_type": "Bearer",
+        "id_token": "eyJhbGciOiJSUzI1NiIsImtpZCI6Ijk0M2EzYTVkN2Q5MTk2MjVhNDU0ZTQ4OWI3NWMyOWFkYWI1N2FjYmEiLCJ0eXAiOiJKV1QifQ.eyJpc3MiOiJodHRwczovL2FjY291bnRzLmdvb2dsZS5jb20iLCJhenAiOiIxNzkxNTAyMDI0OTctcjdjZHJwNjc4YnFxYmhkcnE0dXQ4M3M3MzdpZ3Mzcm4uYXBwcy5nb29nbGV1c2VyY29udGVudC5jb20iLCJhdWQiOiIxNzkxNTAyMDI0OTctcjdjZHJwNjc4YnFxYmhkcnE0dXQ4M3M3MzdpZ3Mzcm4uYXBwcy5nb29nbGV1c2VyY29udGVudC5jb20iLCJzdWIiOiIxMTIxMzE4NjM0MzY3OTQ0MDQ4NTciLCJoZCI6ImVzdHVkYW50ZS5zZWQuc2MuZ292LmJyIiwiZW1haWwiOiI0NTUzNDU3MDIzQGVzdHVkYW50ZS5zZWQuc2MuZ292LmJyIiwiZW1haWxfdmVyaWZpZWQiOnRydWUsImF0X2hhc2giOiJYRDdTVkFzV2M1Sl8xaU5yN2dRMk9nIiwibmFtZSI6IktBVUFOIEJJQU5DSElOSSBFU1RFVkFNIiwicGljdHVyZSI6Imh0dHBzOi8vbGgzLmdvb2dsZXVzZXJjb250ZW50LmNvbS9hL0FDZzhvY0tGNU1teURfeGVwOEc0NnRDVm1OM0hVT1RGV3VLUTA5MElfUUZvZktlUWdCdHVzTms9czk2LWMiLCJnaXZlbl9uYW1lIjoiS0FVQU4iLCJmYW1pbHlfbmFtZSI6IkJJQU5DSElOSSBFU1RFVkFNIiwiaWF0IjoxNzkxMTk4NjM1LCJleHAiOjE3OTEyMDIyMzV9.HAyfzhZU0hNcjAVi8GNCz8z9vMFBBY_vB4sIC6MXJsV2TPiXZCbLxydPj4ma7Onqs54yv8YmODOyM68PRVHI37sYSznq12yqWk1vOQqCA66BIOW9ZhgvxFmZnpXY1LzpRYua8osy8hK5FxRkQdYvqogMf0odJXjyEqJ-h0sQKFHFD_avNF4zvB40QQWkgzWmCKo8JkkwHh9so-lxJeZh4zv4MX4Cs68c34gOZLGg2YeBT7A0-ckoraxODfR8Gp2CvVYIi6L2i5EBiDTk1_et7s6Hf_3BtRx_zYsAamSJS6_n0VV4X83iOJBugRqew56PrXSx7PBI9lvfWeYubI1udw"
+    }
+}
+[2026-10-05 13:10:35] userinfo | {
+    "id": "112131863436794404857",
+    "email": "4553457023@estudante.sed.sc.gov.br",
+    "verified_email": true,
+    "name": "KAUAN BIANCHINI ESTEVAM",
+    "given_name": "KAUAN",
+    "family_name": "BIANCHINI ESTEVAM",
+    "picture": "https:\/\/lh3.googleusercontent.com\/a\/ACg8ocKF5MmyD_xep8G46tCVmN3HUOTFWuKQ090I_QFofKeQgBtusNk=s96-c",
+    "hd": "estudante.sed.sc.gov.br"
+}
+[2026-10-05 13:10:35] user_linked | {
+    "id": "11",
+    "email": "4553457023@estudante.sed.sc.gov.br"
+}
+[2026-10-05 13:10:37] mail | {
+    "to": "4553457023@estudante.sed.sc.gov.br",
+    "ok": true,
+    "isNew": false
+}
+[2026-10-05 13:36:38] AUTH_START redirect_uri=http://localhost/octoart_php/google_callback.php
+[2026-10-05 13:36:46] === CALLBACK START ===
+[2026-10-05 13:36:46] GET | {
+    "state": "45ddd145737dbbd35c7fb31cf4ce1567",
+    "iss": "https:\/\/accounts.google.com",
+    "code": "4\/0AXlqoi7yDxTDjRoQK-Wsjp68INqc4eZr_ib_oT55EwHSH96BNNh-DEw9XoTDZFhyUFeEkw",
+    "scope": "email profile https:\/\/www.googleapis.com\/auth\/userinfo.profile https:\/\/www.googleapis.com\/auth\/userinfo.email openid",
+    "authuser": "0",
+    "hd": "estudante.sed.sc.gov.br",
+    "prompt": "consent"
+}
+[2026-10-05 13:36:46] SESSION_keys | [
+    "google_oauth_state",
+    "google_redirect_uri"
+]
+[2026-10-05 13:36:46] config | {
+    "redirect_uri": "http:\/\/localhost\/octoart_php\/google_callback.php",
+    "app_url": "http:\/\/localhost\/octoart_php",
+    "has_client_id": true,
+    "has_secret": true,
+    "client_id_prefix": "179150202497-r7cdrp6…",
+    "session_state": "45ddd145…",
+    "got_state": "45ddd145…"
+}
+[2026-10-05 13:36:46] token_request | {
+    "url": "https:\/\/oauth2.googleapis.com\/token",
+    "redirect_uri": "http:\/\/localhost\/octoart_php\/google_callback.php"
+}
+[2026-10-05 13:36:46] token_response | {
+    "http_ok": true,
+    "http_code": 200,
+    "error": "",
+    "body": {
+        "access_token": "ya29.a0AX07CmuodTYbi2qgc_fPNV78OsMmNpIzl2TPrv6ltTAVVwLKSl0RlcHEC9yQNcmCJuCUIOM3lkBEBQZFno3xq3quJpNoF6ziNH9zeK4YA0Ojod2pgVLJAV59H7Hfrp7dA_riLZJn0W9A--M2U50LsCo2skOn7ej2A3XgQsQob8AGAPwPczpjR24cXs4w6V3QE2xMkr4aCgYKAewSARESFQHGX2Mi_l04CfChvUBk-y-2ZDnYGA0206",
+        "expires_in": 3599,
+        "scope": "https:\/\/www.googleapis.com\/auth\/userinfo.email https:\/\/www.googleapis.com\/auth\/userinfo.profile openid",
+        "token_type": "Bearer",
+        "id_token": "eyJhbGciOiJSUzI1NiIsImtpZCI6Ijk0M2EzYTVkN2Q5MTk2MjVhNDU0ZTQ4OWI3NWMyOWFkYWI1N2FjYmEiLCJ0eXAiOiJKV1QifQ.eyJpc3MiOiJodHRwczovL2FjY291bnRzLmdvb2dsZS5jb20iLCJhenAiOiIxNzkxNTAyMDI0OTctcjdjZHJwNjc4YnFxYmhkcnE0dXQ4M3M3MzdpZ3Mzcm4uYXBwcy5nb29nbGV1c2VyY29udGVudC5jb20iLCJhdWQiOiIxNzkxNTAyMDI0OTctcjdjZHJwNjc4YnFxYmhkcnE0dXQ4M3M3MzdpZ3Mzcm4uYXBwcy5nb29nbGV1c2VyY29udGVudC5jb20iLCJzdWIiOiIxMTIxMzE4NjM0MzY3OTQ0MDQ4NTciLCJoZCI6ImVzdHVkYW50ZS5zZWQuc2MuZ292LmJyIiwiZW1haWwiOiI0NTUzNDU3MDIzQGVzdHVkYW50ZS5zZWQuc2MuZ292LmJyIiwiZW1haWxfdmVyaWZpZWQiOnRydWUsImF0X2hhc2giOiIwSUlWSk1KV0hlVlpUN1FOTEJIWlBnIiwibmFtZSI6IktBVUFOIEJJQU5DSElOSSBFU1RFVkFNIiwicGljdHVyZSI6Imh0dHBzOi8vbGgzLmdvb2dsZXVzZXJjb250ZW50LmNvbS9hL0FDZzhvY0tGNU1teURfeGVwOEc0NnRDVm1OM0hVT1RGV3VLUTA5MElfUUZvZktlUWdCdHVzTms9czk2LWMiLCJnaXZlbl9uYW1lIjoiS0FVQU4iLCJmYW1pbHlfbmFtZSI6IkJJQU5DSElOSSBFU1RFVkFNIiwiaWF0IjoxNzkxMjAwMjA2LCJleHAiOjE3OTEyMDM4MDZ9.jU7TqutdNlLn3O-9YZ9lkHVmr8ZEueXItSkPumi95gZnw70X5aIY7KpbeyPTnk8c_yC6XiWnbICVyULztWv6hDjXGwaQ6osxa61xbrB1DeDBmoUJjvxLwCasjudLMRxSg8UxCQqKOL6ze5njFBPPxPr9lAGjeuemuq8OkXZLxYmY9Quye_gnhFRk2Uxl6UHbQQgOqGAToFW6vC-Sa9-ULIrfpKoCxh0FW0WA3yEw9zYHUW4jSkzULpN4ESDkxZt0TJPe9UzS-C6W8PhhcNLR4Xw2OcZ-Fy-lxIyPkNHjqeC1ZN0dBcEMJxG5oy1GwGqDGnNR1TaY5G0sVVVvL8fw9A"
+    }
+}
+[2026-10-05 13:36:47] userinfo | {
+    "id": "112131863436794404857",
+    "email": "4553457023@estudante.sed.sc.gov.br",
+    "verified_email": true,
+    "name": "KAUAN BIANCHINI ESTEVAM",
+    "given_name": "KAUAN",
+    "family_name": "BIANCHINI ESTEVAM",
+    "picture": "https:\/\/lh3.googleusercontent.com\/a\/ACg8ocKF5MmyD_xep8G46tCVmN3HUOTFWuKQ090I_QFofKeQgBtusNk=s96-c",
+    "hd": "estudante.sed.sc.gov.br"
+}
+[2026-10-05 13:36:47] user_linked | {
+    "id": "11",
+    "email": "4553457023@estudante.sed.sc.gov.br"
+}
+[2026-10-05 13:36:49] mail | {
+    "to": "4553457023@estudante.sed.sc.gov.br",
+    "ok": true,
+    "isNew": false
+}
+[2026-10-05 13:44:02] AUTH_START redirect_uri=http://localhost/octoart_php/google_callback.php
+[2026-10-05 13:44:07] === CALLBACK START ===
+[2026-10-05 13:44:07] GET | {
+    "state": "a0992ec7432e6f4e6ae879ce827ece57",
+    "iss": "https:\/\/accounts.google.com",
+    "code": "4\/0AXlqoi6WJ9Jhbky6n7JEfOw0rKGdF-xzuAENdi6Elcjr7fT11-d8l9w4soxLA2luaW6WHw",
+    "scope": "email profile https:\/\/www.googleapis.com\/auth\/userinfo.email openid https:\/\/www.googleapis.com\/auth\/userinfo.profile",
+    "authuser": "0",
+    "hd": "estudante.sed.sc.gov.br",
+    "prompt": "none"
+}
+[2026-10-05 13:44:07] SESSION_keys | [
+    "google_oauth_state",
+    "google_redirect_uri"
+]
+[2026-10-05 13:44:07] config | {
+    "redirect_uri": "http:\/\/localhost\/octoart_php\/google_callback.php",
+    "app_url": "http:\/\/localhost\/octoart_php",
+    "has_client_id": true,
+    "has_secret": true,
+    "client_id_prefix": "179150202497-r7cdrp6…",
+    "session_state": "a0992ec7…",
+    "got_state": "a0992ec7…"
+}
+[2026-10-05 13:44:07] token_request | {
+    "url": "https:\/\/oauth2.googleapis.com\/token",
+    "redirect_uri": "http:\/\/localhost\/octoart_php\/google_callback.php"
+}
+[2026-10-05 13:44:07] token_response | {
+    "http_ok": true,
+    "http_code": 200,
+    "error": "",
+    "body": {
+        "access_token": "ya29.a0AX07CmtdCeu7uoUgyiRcE67ejjyMBTG7ok1yXhce_X9flu12oxZ6Y8vOpl1ffdYsaTUE7fq1X_PoEORtI3bedx4W1JJz9lkXY1mLT7hf3iHFXVqNge8bEwcpMRtZkHrO4cg0tHISiNCRjkk6PEeuaXFmp4KoWpOoS4gYHuf4fG7Rn45HZt2pg4TIsjc6pC345QaGSSSbXhKuCC4x0hYNgSWq9507-YCQ7BbnJ_A0WCgWe-Yd2T_C41cWBPgR9VT9WvdmahW2opGYSXSbjw_BJUUxcBgaCgYKAW8SARESFQHGX2MiFuQfAYjfHebRQm0bIuy_kg0290",
+        "expires_in": 3599,
+        "scope": "openid https:\/\/www.googleapis.com\/auth\/userinfo.profile https:\/\/www.googleapis.com\/auth\/userinfo.email",
+        "token_type": "Bearer",
+        "id_token": "eyJhbGciOiJSUzI1NiIsImtpZCI6Ijk0M2EzYTVkN2Q5MTk2MjVhNDU0ZTQ4OWI3NWMyOWFkYWI1N2FjYmEiLCJ0eXAiOiJKV1QifQ.eyJpc3MiOiJodHRwczovL2FjY291bnRzLmdvb2dsZS5jb20iLCJhenAiOiIxNzkxNTAyMDI0OTctcjdjZHJwNjc4YnFxYmhkcnE0dXQ4M3M3MzdpZ3Mzcm4uYXBwcy5nb29nbGV1c2VyY29udGVudC5jb20iLCJhdWQiOiIxNzkxNTAyMDI0OTctcjdjZHJwNjc4YnFxYmhkcnE0dXQ4M3M3MzdpZ3Mzcm4uYXBwcy5nb29nbGV1c2VyY29udGVudC5jb20iLCJzdWIiOiIxMTIxMzE4NjM0MzY3OTQ0MDQ4NTciLCJoZCI6ImVzdHVkYW50ZS5zZWQuc2MuZ292LmJyIiwiZW1haWwiOiI0NTUzNDU3MDIzQGVzdHVkYW50ZS5zZWQuc2MuZ292LmJyIiwiZW1haWxfdmVyaWZpZWQiOnRydWUsImF0X2hhc2giOiJTZlBwaG5Bc1J6M095OEprNzVUX0p3IiwibmFtZSI6IktBVUFOIEJJQU5DSElOSSBFU1RFVkFNIiwicGljdHVyZSI6Imh0dHBzOi8vbGgzLmdvb2dsZXVzZXJjb250ZW50LmNvbS9hL0FDZzhvY0tGNU1teURfeGVwOEc0NnRDVm1OM0hVT1RGV3VLUTA5MElfUUZvZktlUWdCdHVzTms9czk2LWMiLCJnaXZlbl9uYW1lIjoiS0FVQU4iLCJmYW1pbHlfbmFtZSI6IkJJQU5DSElOSSBFU1RFVkFNIiwiaWF0IjoxNzkxMjAwNjQ3LCJleHAiOjE3OTEyMDQyNDd9.mFtn4H_lcn62nMQ5lJJmK1VNdkfhJt8ZwW9XDRmIV667ECixQITz2LyuZrihYJP66nDUCSQo6p3XjodUxYFUGmlOJuv2_X_XnSBXDaCTVJxONAtyqpDPUOIdu1La0cwotU-D4bAQuR5lNl_rvZPexfJFpftw-8EhPOxgxbUnKDvqxIQEitCWDuhNrlwUPWm189DDykTWhP6cHNBX2DB2_LFYFc0PUM2L4Z4C5OxB7x2KYDlqbY4pMM0c43y_O9StobWr-DVG48m_J5uMjISmbSZdxAcnB9FFnowVpQPhl1kR5JD4nuJHqOehXpJ_dfKDLBaO_Hy7J7XJtPWJ-mLHOQ"
+    }
+}
+[2026-10-05 13:44:08] userinfo | {
+    "id": "112131863436794404857",
+    "email": "4553457023@estudante.sed.sc.gov.br",
+    "verified_email": true,
+    "name": "KAUAN BIANCHINI ESTEVAM",
+    "given_name": "KAUAN",
+    "family_name": "BIANCHINI ESTEVAM",
+    "picture": "https:\/\/lh3.googleusercontent.com\/a\/ACg8ocKF5MmyD_xep8G46tCVmN3HUOTFWuKQ090I_QFofKeQgBtusNk=s96-c",
+    "hd": "estudante.sed.sc.gov.br"
+}
+[2026-10-05 13:44:08] foto_perfil | {
+    "remota": "https:\/\/lh3.googleusercontent.com\/a\/ACg8ocKF5MmyD_xep8G46tCVmN3HUOTFWuKQ090I_QFofKeQgBtusNk=s96-c",
+    "salva": "uploads\/img_c079a8be512992d9.png",
+    "local": true
+}
+[2026-10-05 13:44:08] user_linked | {
+    "id": "11",
+    "email": "4553457023@estudante.sed.sc.gov.br",
+    "foto": "uploads\/img_c079a8be512992d9.png",
+    "atualizou_foto": true
+}
+[2026-10-05 13:44:10] mail | {
+    "to": "4553457023@estudante.sed.sc.gov.br",
+    "ok": true,
+    "isNew": false
+}
+[2026-10-06 14:03:39] AUTH_START redirect_uri=http://localhost/octoart_php/google_callback.php
+[2026-10-09 16:24:41] AUTH_START redirect_uri=http://localhost/octoart_php/google_callback.php
+[2026-10-09 16:24:47] === CALLBACK START ===
+[2026-10-09 16:24:47] GET | {
+    "state": "a80340606a98aeec8669b2d4371ca3bc",
+    "iss": "https:\/\/accounts.google.com",
+    "code": "4\/0AXlqoi76Hj5Jf7eu5Ac7NbJUMqT-Kdj7UvG71yd1xOLwTKDRL6lgUa94_1qBqbpBW6L7MA",
+    "scope": "email profile https:\/\/www.googleapis.com\/auth\/userinfo.profile openid https:\/\/www.googleapis.com\/auth\/userinfo.email",
+    "authuser": "3",
+    "hd": "estudante.sed.sc.gov.br",
+    "prompt": "none"
+}
+[2026-10-09 16:24:47] SESSION_keys | [
+    "google_oauth_state",
+    "google_redirect_uri"
+]
+[2026-10-09 16:24:47] config | {
+    "redirect_uri": "http:\/\/localhost\/octoart_php\/google_callback.php",
+    "app_url": "http:\/\/localhost\/octoart_php",
+    "has_client_id": true,
+    "has_secret": true,
+    "client_id_prefix": "179150202497-r7cdrp6…",
+    "session_state": "a8034060…",
+    "got_state": "a8034060…"
+}
+[2026-10-09 16:24:47] token_request | {
+    "url": "https:\/\/oauth2.googleapis.com\/token",
+    "redirect_uri": "http:\/\/localhost\/octoart_php\/google_callback.php"
+}
+[2026-10-09 16:24:47] token_response | {
+    "http_ok": true,
+    "http_code": 200,
+    "error": "",
+    "body": {
+        "access_token": "ya29.a0AX07CmvPRCQpI5vCAedkeJv5F0ClNc_VDc9lTt-7Op6UwDk2nW4CoXa5aWE3kFInuLM5Y_zNXkqo4PmKh4ns8_ZAF69Ou7aZkiQqqisDh5pXMQVUy7uirJaLKUXtylCJt7rOawZkFv3G199KOy1EOUCA4tVxTKUGaGKdB95SKtpvx3ylMNNonXQaAeWb1wfza0SWEXqoGS_MSCtcZOqgopPPIVScZpO27N1Bb7M-gSFr-BETu1gdPNpMkYb9cRhxmQntgpYmBSsYuqBQvIdmVI4xmDviiwaCgYKAWYSARESFQHGX2MiBZCSdeEk1UZeJMEBv3ZHvw0293",
+        "expires_in": 3598,
+        "scope": "openid https:\/\/www.googleapis.com\/auth\/userinfo.email https:\/\/www.googleapis.com\/auth\/userinfo.profile",
+        "token_type": "Bearer",
+        "id_token": "eyJhbGciOiJSUzI1NiIsImtpZCI6Ijk0M2EzYTVkN2Q5MTk2MjVhNDU0ZTQ4OWI3NWMyOWFkYWI1N2FjYmEiLCJ0eXAiOiJKV1QifQ.eyJpc3MiOiJodHRwczovL2FjY291bnRzLmdvb2dsZS5jb20iLCJhenAiOiIxNzkxNTAyMDI0OTctcjdjZHJwNjc4YnFxYmhkcnE0dXQ4M3M3MzdpZ3Mzcm4uYXBwcy5nb29nbGV1c2VyY29udGVudC5jb20iLCJhdWQiOiIxNzkxNTAyMDI0OTctcjdjZHJwNjc4YnFxYmhkcnE0dXQ4M3M3MzdpZ3Mzcm4uYXBwcy5nb29nbGV1c2VyY29udGVudC5jb20iLCJzdWIiOiIxMTIxMzE4NjM0MzY3OTQ0MDQ4NTciLCJoZCI6ImVzdHVkYW50ZS5zZWQuc2MuZ292LmJyIiwiZW1haWwiOiI0NTUzNDU3MDIzQGVzdHVkYW50ZS5zZWQuc2MuZ292LmJyIiwiZW1haWxfdmVyaWZpZWQiOnRydWUsImF0X2hhc2giOiJxQlJuQ3NMYzI0VXBUQnl2UXhELXVBIiwibmFtZSI6IktBVUFOIEJJQU5DSElOSSBFU1RFVkFNIiwicGljdHVyZSI6Imh0dHBzOi8vbGgzLmdvb2dsZXVzZXJjb250ZW50LmNvbS9hL0FDZzhvY0tGNU1teURfeGVwOEc0NnRDVm1OM0hVT1RGV3VLUTA5MElfUUZvZktlUWdCdHVzTms9czk2LWMiLCJnaXZlbl9uYW1lIjoiS0FVQU4iLCJmYW1pbHlfbmFtZSI6IkJJQU5DSElOSSBFU1RFVkFNIiwiaWF0IjoxNzkxNTU1ODg3LCJleHAiOjE3OTE1NTk0ODd9.W3GJP5bMj2s0ahJE9YMG0yJHqWpPkJ8-hvgRT9G9pASvzd_8LSZGNh2Q418cDCCee-eM-15_4rXOOfpDGLoUMbcU_wH-OB35hIi8cu-3_OobkHJCHB2oskFx4hvN9XLIafcCk5wgQ2ie58vs05FL_uBhJv2VQB-KS0lfFh0sS1RtqCPS42jQ2uiT8weRqJtK1Ab0N3vu0uB7bHkEnKXsCUistoLOBqAxWFUgnfITIx4Pfs49QsSkyjykjVXmSVD6rWhHABij4vTOhLAXFn1iFJyKVAdDwDwnWHhps57ZmbeC4eDO_xyEThQxp-EVeuXXcapLfWCgT6vE726XyKWA9g"
+    }
+}
+[2026-10-09 16:24:48] userinfo | {
+    "id": "112131863436794404857",
+    "email": "4553457023@estudante.sed.sc.gov.br",
+    "verified_email": true,
+    "name": "KAUAN BIANCHINI ESTEVAM",
+    "given_name": "KAUAN",
+    "family_name": "BIANCHINI ESTEVAM",
+    "picture": "https:\/\/lh3.googleusercontent.com\/a\/ACg8ocKF5MmyD_xep8G46tCVmN3HUOTFWuKQ090I_QFofKeQgBtusNk=s96-c",
+    "hd": "estudante.sed.sc.gov.br"
+}
+[2026-10-09 16:24:48] foto_perfil | {
+    "remota": "https:\/\/lh3.googleusercontent.com\/a\/ACg8ocKF5MmyD_xep8G46tCVmN3HUOTFWuKQ090I_QFofKeQgBtusNk=s96-c",
+    "salva": "uploads\/img_585d18f6941bd68c.png",
+    "local": true
+}
+[2026-10-09 16:24:48] user_linked | {
+    "id": 12,
+    "email": "4553457023@estudante.sed.sc.gov.br",
+    "foto": "uploads\/img_585d18f6941bd68c.png",
+    "atualizou_foto": true
+}
+[2026-10-09 16:24:50] mail | {
+    "to": "4553457023@estudante.sed.sc.gov.br",
+    "ok": true,
+    "isNew": false
+}
+[2026-10-09 16:24:53] AUTH_START redirect_uri=http://localhost/octoart_php/google_callback.php
+[2026-10-09 16:24:59] === CALLBACK START ===
+[2026-10-09 16:24:59] GET | {
+    "state": "e8d30c332f670f9d9da726ecb24acd17",
+    "iss": "https:\/\/accounts.google.com",
+    "code": "4\/0AXlqoi6oMKcD2C5K_yX0k42EbQK79ROZ3WUkC6nWpfVwVVKWb_R8dTWsrIeSNhvvXxpFSA",
+    "scope": "email profile https:\/\/www.googleapis.com\/auth\/userinfo.profile https:\/\/www.googleapis.com\/auth\/userinfo.email openid",
+    "authuser": "3",
+    "hd": "estudante.sed.sc.gov.br",
+    "prompt": "none"
+}
+[2026-10-09 16:24:59] SESSION_keys | [
+    "google_oauth_state",
+    "google_redirect_uri"
+]
+[2026-10-09 16:24:59] config | {
+    "redirect_uri": "http:\/\/localhost\/octoart_php\/google_callback.php",
+    "app_url": "http:\/\/localhost\/octoart_php",
+    "has_client_id": true,
+    "has_secret": true,
+    "client_id_prefix": "179150202497-r7cdrp6…",
+    "session_state": "e8d30c33…",
+    "got_state": "e8d30c33…"
+}
+[2026-10-09 16:24:59] token_request | {
+    "url": "https:\/\/oauth2.googleapis.com\/token",
+    "redirect_uri": "http:\/\/localhost\/octoart_php\/google_callback.php"
+}
+[2026-10-09 16:25:00] token_response | {
+    "http_ok": true,
+    "http_code": 200,
+    "error": "",
+    "body": {
+        "access_token": "ya29.a0AX07CmsTbvGVesolXCihATwVM7k3Q_tZ-C2Xa5YskwDVDP4-HFpEAtVmuAh6qvjgsugt3AYk-fE2iRMVo0PKHpLohVcSPBFi2_fB9elggWZt4IXgOoISvrlycAXINYI1i_g-u-Vm5uP5RETiY74uktiZo3oF_9np92H-LgBuEhqP_si_gwwqdh-Gn2VyObBJdJnpzfkEMLNQ76EWk1j8RyVxHbkf55ST_-PcPoNjgBU3B597a7nC4dO_GSuvWsVM6AmlgQX9RGaVJ7CO-_DjKumPN2eMaCgYKAdwSARESFQHGX2MivDjvVHAE-mFk-nP-IjbNdA0291",
+        "expires_in": 3598,
+        "scope": "https:\/\/www.googleapis.com\/auth\/userinfo.email https:\/\/www.googleapis.com\/auth\/userinfo.profile openid",
+        "token_type": "Bearer",
+        "id_token": "eyJhbGciOiJSUzI1NiIsImtpZCI6Ijk0M2EzYTVkN2Q5MTk2MjVhNDU0ZTQ4OWI3NWMyOWFkYWI1N2FjYmEiLCJ0eXAiOiJKV1QifQ.eyJpc3MiOiJodHRwczovL2FjY291bnRzLmdvb2dsZS5jb20iLCJhenAiOiIxNzkxNTAyMDI0OTctcjdjZHJwNjc4YnFxYmhkcnE0dXQ4M3M3MzdpZ3Mzcm4uYXBwcy5nb29nbGV1c2VyY29udGVudC5jb20iLCJhdWQiOiIxNzkxNTAyMDI0OTctcjdjZHJwNjc4YnFxYmhkcnE0dXQ4M3M3MzdpZ3Mzcm4uYXBwcy5nb29nbGV1c2VyY29udGVudC5jb20iLCJzdWIiOiIxMTIxMzE4NjM0MzY3OTQ0MDQ4NTciLCJoZCI6ImVzdHVkYW50ZS5zZWQuc2MuZ292LmJyIiwiZW1haWwiOiI0NTUzNDU3MDIzQGVzdHVkYW50ZS5zZWQuc2MuZ292LmJyIiwiZW1haWxfdmVyaWZpZWQiOnRydWUsImF0X2hhc2giOiI5eUVQZlNaWXhDckZuOFptZ2FXUkNnIiwibmFtZSI6IktBVUFOIEJJQU5DSElOSSBFU1RFVkFNIiwicGljdHVyZSI6Imh0dHBzOi8vbGgzLmdvb2dsZXVzZXJjb250ZW50LmNvbS9hL0FDZzhvY0tGNU1teURfeGVwOEc0NnRDVm1OM0hVT1RGV3VLUTA5MElfUUZvZktlUWdCdHVzTms9czk2LWMiLCJnaXZlbl9uYW1lIjoiS0FVQU4iLCJmYW1pbHlfbmFtZSI6IkJJQU5DSElOSSBFU1RFVkFNIiwiaWF0IjoxNzkxNTU1OTAwLCJleHAiOjE3OTE1NTk1MDB9.o6dP6mkvn6OmGNW6Dq2G02jgEOJHV_GzYLtPUzdN3XcH2JPxhaYe7jG9ZVsiFogQp7gSRrMnH3g5BTTr5wNpN2FX8DE620Fh36T950KkyQeudHUfBUOWo0RiWpMieAvM4Xw7qCAC1tU1TJpSD8LeGjf69zitA2ygztr_9AMhAIUhUyFK8tEVnsRj3C4BD5UqstqhnvWEVEirvvdK3x-mi7eORQ4MijVlx2HrsWQahMdC-rjA4m0KvqzDcWr7itETn6CybQt7DDgbfUFY8bXJ6Nk4jHmWz_DL_Kt3G7D09THbazbxGUTlIEIsMRnSSrbTpserFT9AUw3n3wDXvA9RrQ"
+    }
+}
+[2026-10-09 16:25:01] userinfo | {
+    "id": "112131863436794404857",
+    "email": "4553457023@estudante.sed.sc.gov.br",
+    "verified_email": true,
+    "name": "KAUAN BIANCHINI ESTEVAM",
+    "given_name": "KAUAN",
+    "family_name": "BIANCHINI ESTEVAM",
+    "picture": "https:\/\/lh3.googleusercontent.com\/a\/ACg8ocKF5MmyD_xep8G46tCVmN3HUOTFWuKQ090I_QFofKeQgBtusNk=s96-c",
+    "hd": "estudante.sed.sc.gov.br"
+}
+[2026-10-09 16:25:01] foto_perfil | {
+    "remota": "https:\/\/lh3.googleusercontent.com\/a\/ACg8ocKF5MmyD_xep8G46tCVmN3HUOTFWuKQ090I_QFofKeQgBtusNk=s96-c",
+    "salva": "uploads\/img_6c6dda5c4d877773.png",
+    "local": true
+}
+[2026-10-09 16:25:01] user_linked | {
+    "id": 12,
+    "email": "4553457023@estudante.sed.sc.gov.br",
+    "foto": "uploads\/img_585d18f6941bd68c.png",
+    "atualizou_foto": false
+}
+[2026-10-09 16:25:03] mail | {
+    "to": "4553457023@estudante.sed.sc.gov.br",
+    "ok": true,
+    "isNew": false
+}
+[2026-10-09 16:29:09] AUTH_START redirect_uri=http://localhost/octoart_php/google_callback.php
+[2026-10-09 16:29:14] === CALLBACK START ===
+[2026-10-09 16:29:14] GET | {
+    "state": "778354364ce382a79d93c59f430588d6",
+    "iss": "https:\/\/accounts.google.com",
+    "code": "4\/0AXlqoi71RkKh5jk0zvUKXDhojKxrBSIYszm0yf4lK2UlEYDA6YCvlrO9_wi91Z7v2h2ZCg",
+    "scope": "email profile https:\/\/www.googleapis.com\/auth\/userinfo.email openid https:\/\/www.googleapis.com\/auth\/userinfo.profile",
+    "authuser": "3",
+    "hd": "estudante.sed.sc.gov.br",
+    "prompt": "none"
+}
+[2026-10-09 16:29:14] SESSION_keys | [
+    "google_oauth_state",
+    "google_redirect_uri"
+]
+[2026-10-09 16:29:14] config | {
+    "redirect_uri": "http:\/\/localhost\/octoart_php\/google_callback.php",
+    "app_url": "http:\/\/localhost\/octoart_php",
+    "has_client_id": true,
+    "has_secret": true,
+    "client_id_prefix": "179150202497-r7cdrp6…",
+    "session_state": "77835436…",
+    "got_state": "77835436…"
+}
+[2026-10-09 16:29:14] token_request | {
+    "url": "https:\/\/oauth2.googleapis.com\/token",
+    "redirect_uri": "http:\/\/localhost\/octoart_php\/google_callback.php"
+}
+[2026-10-09 16:29:15] token_response | {
+    "http_ok": true,
+    "http_code": 200,
+    "error": "",
+    "body": {
+        "access_token": "ya29.a0AX07CmsdfAyeIP9yFV8v398_hS00lrNneDFA8rjioaWCiWgYswt0BYuvF0Q3hFxyjHGvx8KYX5__GUZc_-M66YUj0qTAqLb2IMg0V9MxXUSRHHKRcflEzVKHzGxE9xJaK6BkK7CTSkgrsZaDVlgu21XE8IWxuUJiSNVIp5CpDAyXZgaP4iBK77P3NKJZkBIFfPNkPVBjErXjwC_5gwSq6CIReL5jVmDI76-3g1KM254UhphaBIWDD9rHB9Bqmt1ZbzH-X1uAT4IAft9UzpGSYPC8ItggaCgYKAYkSARESFQHGX2Mii012bmq0mgOlGZI_aHRo_Q0291",
+        "expires_in": 3599,
+        "scope": "openid https:\/\/www.googleapis.com\/auth\/userinfo.profile https:\/\/www.googleapis.com\/auth\/userinfo.email",
+        "token_type": "Bearer",
+        "id_token": "eyJhbGciOiJSUzI1NiIsImtpZCI6Ijk0M2EzYTVkN2Q5MTk2MjVhNDU0ZTQ4OWI3NWMyOWFkYWI1N2FjYmEiLCJ0eXAiOiJKV1QifQ.eyJpc3MiOiJodHRwczovL2FjY291bnRzLmdvb2dsZS5jb20iLCJhenAiOiIxNzkxNTAyMDI0OTctcjdjZHJwNjc4YnFxYmhkcnE0dXQ4M3M3MzdpZ3Mzcm4uYXBwcy5nb29nbGV1c2VyY29udGVudC5jb20iLCJhdWQiOiIxNzkxNTAyMDI0OTctcjdjZHJwNjc4YnFxYmhkcnE0dXQ4M3M3MzdpZ3Mzcm4uYXBwcy5nb29nbGV1c2VyY29udGVudC5jb20iLCJzdWIiOiIxMTIxMzE4NjM0MzY3OTQ0MDQ4NTciLCJoZCI6ImVzdHVkYW50ZS5zZWQuc2MuZ292LmJyIiwiZW1haWwiOiI0NTUzNDU3MDIzQGVzdHVkYW50ZS5zZWQuc2MuZ292LmJyIiwiZW1haWxfdmVyaWZpZWQiOnRydWUsImF0X2hhc2giOiI2c2J6YW5tOW9CZEhVZ3dSWG1pOXNnIiwibmFtZSI6IktBVUFOIEJJQU5DSElOSSBFU1RFVkFNIiwicGljdHVyZSI6Imh0dHBzOi8vbGgzLmdvb2dsZXVzZXJjb250ZW50LmNvbS9hL0FDZzhvY0tGNU1teURfeGVwOEc0NnRDVm1OM0hVT1RGV3VLUTA5MElfUUZvZktlUWdCdHVzTms9czk2LWMiLCJnaXZlbl9uYW1lIjoiS0FVQU4iLCJmYW1pbHlfbmFtZSI6IkJJQU5DSElOSSBFU1RFVkFNIiwiaWF0IjoxNzkxNTU2MTU0LCJleHAiOjE3OTE1NTk3NTR9.D2zFrua527q2pRVWoI1GbmGdm9lIEQFZyAuQTHmOqXJuV9DV296eJnCXjGFDO88RbP0c55lBzKGubLFPkQS1wNqXf-MJ0DP6PnzKwVU4NLLaOFX3BzSC6GD-XYaUGq8mUN8Gw1ph88kIz25xkTX491QQycOV0lEO_zypgxKVg5oIgVB3M4p3ATzBtLv3QOteb3PETeJx3km8K-B4w-cGHqVgkVU7SKpPUTi6gY8gHp9fwC1c-_8QJul3TqM_NBIsyvrXDtK3HpTYLZOEnaIJ716ZQOZdAVbTSBzNFI3LojWLVYzMNV-ieu02_fu8GqM9tzhnu-2M7cuuz0jVRIzwXw"
+    }
+}
+[2026-10-09 16:29:15] userinfo | {
+    "id": "112131863436794404857",
+    "email": "4553457023@estudante.sed.sc.gov.br",
+    "verified_email": true,
+    "name": "KAUAN BIANCHINI ESTEVAM",
+    "given_name": "KAUAN",
+    "family_name": "BIANCHINI ESTEVAM",
+    "picture": "https:\/\/lh3.googleusercontent.com\/a\/ACg8ocKF5MmyD_xep8G46tCVmN3HUOTFWuKQ090I_QFofKeQgBtusNk=s96-c",
+    "hd": "estudante.sed.sc.gov.br"
+}
+[2026-10-09 16:29:16] foto_perfil | {
+    "remota": "https:\/\/lh3.googleusercontent.com\/a\/ACg8ocKF5MmyD_xep8G46tCVmN3HUOTFWuKQ090I_QFofKeQgBtusNk=s96-c",
+    "salva": "uploads\/img_4f963e828e962803.png",
+    "local": true
+}
+[2026-10-09 16:29:16] user_linked | {
+    "id": 12,
+    "email": "4553457023@estudante.sed.sc.gov.br",
+    "foto": "uploads\/img_585d18f6941bd68c.png",
+    "atualizou_foto": false
+}
+[2026-10-09 16:29:18] mail | {
+    "to": "4553457023@estudante.sed.sc.gov.br",
+    "ok": true,
+    "isNew": false
+}
+[2026-10-09 18:30:19] AUTH_START redirect_uri=http://localhost/octoart_php/google_callback.php
+[2026-10-09 18:30:24] === CALLBACK START ===
+[2026-10-09 18:30:24] GET | {
+    "state": "264a50a7c3f53c64c2396284c7742022",
+    "iss": "https:\/\/accounts.google.com",
+    "code": "4\/0AXlqoi4oU-BI7VnumbpXtAI5hAdWPP1Fbm6WnvtCd6Yv5BNSbALj3jlLQfUDJk_f0IuMQQ",
+    "scope": "email profile https:\/\/www.googleapis.com\/auth\/userinfo.email https:\/\/www.googleapis.com\/auth\/userinfo.profile openid",
+    "authuser": "3",
+    "hd": "estudante.sed.sc.gov.br",
+    "prompt": "none"
+}
+[2026-10-09 18:30:24] SESSION_keys | [
+    "google_oauth_state",
+    "google_redirect_uri"
+]
+[2026-10-09 18:30:24] config | {
+    "redirect_uri": "http:\/\/localhost\/octoart_php\/google_callback.php",
+    "app_url": "http:\/\/localhost\/octoart_php",
+    "has_client_id": true,
+    "has_secret": true,
+    "client_id_prefix": "179150202497-r7cdrp6…",
+    "session_state": "264a50a7…",
+    "got_state": "264a50a7…"
+}
+[2026-10-09 18:30:24] token_request | {
+    "url": "https:\/\/oauth2.googleapis.com\/token",
+    "redirect_uri": "http:\/\/localhost\/octoart_php\/google_callback.php"
+}
+[2026-10-09 18:30:25] token_response | {
+    "http_ok": true,
+    "http_code": 200,
+    "error": "",
+    "body": {
+        "access_token": "ya29.a0AX07CmvX5hZfWwpmmcimlzbBmB2ONFfr-mJT0YftlLQUOkp3Eom4hFRCl00f520I47qpe8xBcDUhVKNh0xAak2qDNb-KYljzwuvUPGUtWZOcNg5ZHQny5TdwVkd4lIO4M04nloXaVcYcHcOC-qUXsuVc5lSxtlHy5h_5CBsCxBdWU51YkD_aKNjIn5IrK8xNPcTnGzc93lnBpVtCaS3QMW26R261QXwyq8neg-MAgGZOlTI5kbBxH3VB5V1mbtQvez2iVH-7rvjFbBSaAIipoxsLTXz8aCgYKATsSARESFQHGX2Mis8iHZy7WnYNbEmuS638tEA0291",
+        "expires_in": 3599,
+        "scope": "openid https:\/\/www.googleapis.com\/auth\/userinfo.email https:\/\/www.googleapis.com\/auth\/userinfo.profile",
+        "token_type": "Bearer",
+        "id_token": "eyJhbGciOiJSUzI1NiIsImtpZCI6Ijk0M2EzYTVkN2Q5MTk2MjVhNDU0ZTQ4OWI3NWMyOWFkYWI1N2FjYmEiLCJ0eXAiOiJKV1QifQ.eyJpc3MiOiJodHRwczovL2FjY291bnRzLmdvb2dsZS5jb20iLCJhenAiOiIxNzkxNTAyMDI0OTctcjdjZHJwNjc4YnFxYmhkcnE0dXQ4M3M3MzdpZ3Mzcm4uYXBwcy5nb29nbGV1c2VyY29udGVudC5jb20iLCJhdWQiOiIxNzkxNTAyMDI0OTctcjdjZHJwNjc4YnFxYmhkcnE0dXQ4M3M3MzdpZ3Mzcm4uYXBwcy5nb29nbGV1c2VyY29udGVudC5jb20iLCJzdWIiOiIxMTIxMzE4NjM0MzY3OTQ0MDQ4NTciLCJoZCI6ImVzdHVkYW50ZS5zZWQuc2MuZ292LmJyIiwiZW1haWwiOiI0NTUzNDU3MDIzQGVzdHVkYW50ZS5zZWQuc2MuZ292LmJyIiwiZW1haWxfdmVyaWZpZWQiOnRydWUsImF0X2hhc2giOiJCWWs4b2t0WVQyZjdfOEhocDFjUWhBIiwibmFtZSI6IktBVUFOIEJJQU5DSElOSSBFU1RFVkFNIiwicGljdHVyZSI6Imh0dHBzOi8vbGgzLmdvb2dsZXVzZXJjb250ZW50LmNvbS9hL0FDZzhvY0tGNU1teURfeGVwOEc0NnRDVm1OM0hVT1RGV3VLUTA5MElfUUZvZktlUWdCdHVzTms9czk2LWMiLCJnaXZlbl9uYW1lIjoiS0FVQU4iLCJmYW1pbHlfbmFtZSI6IkJJQU5DSElOSSBFU1RFVkFNIiwiaWF0IjoxNzkxNTYzNDI0LCJleHAiOjE3OTE1NjcwMjR9.itMAKV0OOK_OouqmffbZXu5Us4OFgKz9RwQJb-MVsaScgs3h7Hj8FB_MgEiSeNmMPK7kymaPlZBybY9STy6Syk2cqEAwT9guPgNfdSd6woc5joAsZqIzpEL_lYBt6iLXsY42Vz1ffCq-wAUJ0v5b2WTRZkELGsK5IFzg6ZxjL1MOTGoDqNSZ6phge_F55MT_SLqYaTMBSB7HmiWtTYuNL39RoTMa9Jhw3bOxXqV8JXRN0B25gjt87NXLQzGsB419gz41dZ1hgltl3Y928ymabvoQ7NnGpd9S4S99x-nbmLisPcW10h_Hs9jMZUN7sQoEWc57XsFJqFXdx4cOyoTL5A"
+    }
+}
+[2026-10-09 18:30:25] userinfo | {
+    "id": "112131863436794404857",
+    "email": "4553457023@estudante.sed.sc.gov.br",
+    "verified_email": true,
+    "name": "KAUAN BIANCHINI ESTEVAM",
+    "given_name": "KAUAN",
+    "family_name": "BIANCHINI ESTEVAM",
+    "picture": "https:\/\/lh3.googleusercontent.com\/a\/ACg8ocKF5MmyD_xep8G46tCVmN3HUOTFWuKQ090I_QFofKeQgBtusNk=s96-c",
+    "hd": "estudante.sed.sc.gov.br"
+}
+[2026-10-09 18:30:25] foto_perfil | {
+    "remota": "https:\/\/lh3.googleusercontent.com\/a\/ACg8ocKF5MmyD_xep8G46tCVmN3HUOTFWuKQ090I_QFofKeQgBtusNk=s96-c",
+    "salva": "uploads\/img_3b3ed9a18594d818.png",
+    "local": true
+}
+[2026-10-09 18:30:25] user_linked | {
+    "id": 12,
+    "email": "4553457023@estudante.sed.sc.gov.br",
+    "foto": "uploads\/img_585d18f6941bd68c.png",
+    "atualizou_foto": false
+}
+[2026-10-09 18:30:28] mail | {
+    "to": "4553457023@estudante.sed.sc.gov.br",
+    "ok": true,
+    "isNew": false
+}
+[2026-10-27 12:28:18] AUTH_START redirect_uri=http://localhost/octoart_php/google_callback.php
+[2026-10-27 12:28:24] === CALLBACK START ===
+[2026-10-27 12:28:24] GET | {
+    "state": "802d37d392a2d56776b173ee22c7988e",
+    "iss": "https:\/\/accounts.google.com",
+    "code": "4\/0AXlqoi4BCtpaQpkNVQMylT3BR106_Iuj-jRrpeM7F9ItBBh_CshJbrIE-tbKy8sqH68QXw",
+    "scope": "email profile https:\/\/www.googleapis.com\/auth\/userinfo.profile https:\/\/www.googleapis.com\/auth\/userinfo.email openid",
+    "authuser": "0",
+    "hd": "estudante.sed.sc.gov.br",
+    "prompt": "consent"
+}
+[2026-10-27 12:28:24] SESSION_keys | [
+    "google_oauth_state",
+    "google_redirect_uri"
+]
+[2026-10-27 12:28:24] config | {
+    "redirect_uri": "http:\/\/localhost\/octoart_php\/google_callback.php",
+    "app_url": "http:\/\/localhost\/octoart_php",
+    "has_client_id": true,
+    "has_secret": true,
+    "client_id_prefix": "179150202497-r7cdrp6…",
+    "session_state": "802d37d3…",
+    "got_state": "802d37d3…"
+}
+[2026-10-27 12:28:25] token_request | {
+    "url": "https:\/\/oauth2.googleapis.com\/token",
+    "redirect_uri": "http:\/\/localhost\/octoart_php\/google_callback.php"
+}
+[2026-10-27 12:28:25] token_response | {
+    "http_ok": true,
+    "http_code": 200,
+    "error": "",
+    "body": {
+        "access_token": "ya29.a0AehfTOmJch06UJkqeM5OvvXOSRirbVfflt6Y2oNQ1vY_vn61kBQzcX6JAMRGZ3CyoSwjvtV8K9arGRGU5N49SQsJIJBQcxW27nn9yEgyQLC2Fu6b5-nj-Sgs1gprva4-R4-pHH3cjoJ_MR4D7GtoUG7erqr5UQvBo4_GqjL_Y8nIz863SkxvRhBpi9XO1mLLeE2GkdgaCgYKASASARESFQHGX2MiH96CWxxv2qDQ594qzXBWZw0206",
+        "expires_in": 3599,
+        "scope": "https:\/\/www.googleapis.com\/auth\/userinfo.profile openid https:\/\/www.googleapis.com\/auth\/userinfo.email",
+        "token_type": "Bearer",
+        "id_token": "eyJhbGciOiJSUzI1NiIsImtpZCI6Ijk0M2EzYTVkN2Q5MTk2MjVhNDU0ZTQ4OWI3NWMyOWFkYWI1N2FjYmEiLCJ0eXAiOiJKV1QifQ.eyJpc3MiOiJodHRwczovL2FjY291bnRzLmdvb2dsZS5jb20iLCJhenAiOiIxNzkxNTAyMDI0OTctcjdjZHJwNjc4YnFxYmhkcnE0dXQ4M3M3MzdpZ3Mzcm4uYXBwcy5nb29nbGV1c2VyY29udGVudC5jb20iLCJhdWQiOiIxNzkxNTAyMDI0OTctcjdjZHJwNjc4YnFxYmhkcnE0dXQ4M3M3MzdpZ3Mzcm4uYXBwcy5nb29nbGV1c2VyY29udGVudC5jb20iLCJzdWIiOiIxMTIxMzE4NjM0MzY3OTQ0MDQ4NTciLCJoZCI6ImVzdHVkYW50ZS5zZWQuc2MuZ292LmJyIiwiZW1haWwiOiI0NTUzNDU3MDIzQGVzdHVkYW50ZS5zZWQuc2MuZ292LmJyIiwiZW1haWxfdmVyaWZpZWQiOnRydWUsImF0X2hhc2giOiJ0WWlmR1V1SGFaQ1VKTncxYXVmSmdnIiwibmFtZSI6IktBVUFOIEJJQU5DSElOSSBFU1RFVkFNIiwicGljdHVyZSI6Imh0dHBzOi8vbGgzLmdvb2dsZXVzZXJjb250ZW50LmNvbS9hL0FDZzhvY0tGNU1teURfeGVwOEc0NnRDVm1OM0hVT1RGV3VLUTA5MElfUUZvZktlUWdCdHVzTms9czk2LWMiLCJnaXZlbl9uYW1lIjoiS0FVQU4iLCJmYW1pbHlfbmFtZSI6IkJJQU5DSElOSSBFU1RFVkFNIiwiaWF0IjoxNzkzMTAwNTQ1LCJleHAiOjE3OTMxMDQxNDV9.bFT1CbYJT_UlsVydMqNOStnxMg3fTbwMe0GytMP80sDKCTsJhqAzHFdl1QXFqVK_nkdZxJMJZ2ihXzm1HuL3WqJ2_6V_R3YebCuZYQRGm76OGVycjC9wpiLppK8NNW-HYDH6gVAR01Y_C8r-0zsF1t7ZH_o5cAYM-aOr4SvxdpRdHyF-TnGKok1n3RFIaQdip_JHDuDsalL457zuiRl5-qg5Thi3JHtjlaXNX-kcse37DioF8_-MbdHkKte31vutOILi6plrX5B-Z15DdLnwgUWyQxbFG1D3CaXtNcFVf2-DssQCT4zN5Fy3m6y_YVkW7X88-PRiwDCeO5PAX2fhsA"
+    }
+}
+[2026-10-27 12:28:25] userinfo | {
+    "id": "112131863436794404857",
+    "email": "4553457023@estudante.sed.sc.gov.br",
+    "verified_email": true,
+    "name": "KAUAN BIANCHINI ESTEVAM",
+    "given_name": "KAUAN",
+    "family_name": "BIANCHINI ESTEVAM",
+    "picture": "https:\/\/lh3.googleusercontent.com\/a\/ACg8ocKF5MmyD_xep8G46tCVmN3HUOTFWuKQ090I_QFofKeQgBtusNk=s96-c",
+    "hd": "estudante.sed.sc.gov.br"
+}
+[2026-10-27 12:28:26] foto_perfil | {
+    "remota": "https:\/\/lh3.googleusercontent.com\/a\/ACg8ocKF5MmyD_xep8G46tCVmN3HUOTFWuKQ090I_QFofKeQgBtusNk=s96-c",
+    "salva": "uploads\/img_fdc731ac7b8d6277.png",
+    "local": true
+}
+[2026-10-27 12:28:26] user_created | {
+    "id": 14,
+    "email": "4553457023@estudante.sed.sc.gov.br",
+    "foto": "uploads\/img_fdc731ac7b8d6277.png"
+}
+[2026-10-27 12:28:28] mail | {
+    "to": "4553457023@estudante.sed.sc.gov.br",
+    "ok": true,
+    "isNew": true
+}
+[2026-10-27 13:05:50] AUTH_START redirect_uri=http://localhost/octoart_php/google_callback.php
+[2026-10-27 13:05:54] === CALLBACK START ===
+[2026-10-27 13:05:54] GET | {
+    "state": "087a3a4e32159640f78706ced212d102",
+    "iss": "https:\/\/accounts.google.com",
+    "code": "4\/0AUn6Hd-zMsbEoOxTXYRgUk9lLQXK3kzzktoq8wu1iDVjlSPZzVqlSCI2H-_0Wdg8OS9IhQ",
+    "scope": "email profile https:\/\/www.googleapis.com\/auth\/userinfo.profile https:\/\/www.googleapis.com\/auth\/userinfo.email openid",
+    "authuser": "0",
+    "hd": "estudante.sed.sc.gov.br",
+    "prompt": "none"
+}
+[2026-10-27 13:05:54] SESSION_keys | [
+    "google_oauth_state",
+    "google_redirect_uri"
+]
+[2026-10-27 13:05:54] config | {
+    "redirect_uri": "http:\/\/localhost\/octoart_php\/google_callback.php",
+    "app_url": "http:\/\/localhost\/octoart_php",
+    "has_client_id": true,
+    "has_secret": true,
+    "client_id_prefix": "179150202497-r7cdrp6…",
+    "session_state": "087a3a4e…",
+    "got_state": "087a3a4e…"
+}
+[2026-10-27 13:05:54] token_request | {
+    "url": "https:\/\/oauth2.googleapis.com\/token",
+    "redirect_uri": "http:\/\/localhost\/octoart_php\/google_callback.php"
+}
+[2026-10-27 13:05:55] token_response | {
+    "http_ok": true,
+    "http_code": 200,
+    "error": "",
+    "body": {
+        "access_token": "ya29.a0AX07CmulyMs6BtcD_RS5VV01zspE0ooWTUQdRIxD4bnsxnXbmSjbEBNgAjDwx4vkeyhViVJgYKh-AMQAY4D_YrBxpnkCAm8J2PwZAvRz-JGDYiRK18OLfSanJWKeLtJxpP98CRYYTxewE1YOHeKrbNFL2c5mI-5g4KqxhB4AIXTH2DdXyH40UYMD01tyAa2VrxMHvEtozksvfPU6T8uL-Cgs5OQrE2LPVYMaMnFoVMT1YZ5zuQTXhVdVs73pKOr7_lS9UTXKMJZZL8ez8JLK80SZSOtoaCgYKAZ8SARESFQHGX2MiRAWrYK9Lf9Ot-48CT2OUbg0291",
+        "expires_in": 3598,
+        "scope": "openid https:\/\/www.googleapis.com\/auth\/userinfo.email https:\/\/www.googleapis.com\/auth\/userinfo.profile",
+        "token_type": "Bearer",
+        "id_token": "eyJhbGciOiJSUzI1NiIsImtpZCI6Ijk0M2EzYTVkN2Q5MTk2MjVhNDU0ZTQ4OWI3NWMyOWFkYWI1N2FjYmEiLCJ0eXAiOiJKV1QifQ.eyJpc3MiOiJodHRwczovL2FjY291bnRzLmdvb2dsZS5jb20iLCJhenAiOiIxNzkxNTAyMDI0OTctcjdjZHJwNjc4YnFxYmhkcnE0dXQ4M3M3MzdpZ3Mzcm4uYXBwcy5nb29nbGV1c2VyY29udGVudC5jb20iLCJhdWQiOiIxNzkxNTAyMDI0OTctcjdjZHJwNjc4YnFxYmhkcnE0dXQ4M3M3MzdpZ3Mzcm4uYXBwcy5nb29nbGV1c2VyY29udGVudC5jb20iLCJzdWIiOiIxMTIxMzE4NjM0MzY3OTQ0MDQ4NTciLCJoZCI6ImVzdHVkYW50ZS5zZWQuc2MuZ292LmJyIiwiZW1haWwiOiI0NTUzNDU3MDIzQGVzdHVkYW50ZS5zZWQuc2MuZ292LmJyIiwiZW1haWxfdmVyaWZpZWQiOnRydWUsImF0X2hhc2giOiI3TXpsdlV0RkpDRlE1ZG1OTTdkejR3IiwibmFtZSI6IktBVUFOIEJJQU5DSElOSSBFU1RFVkFNIiwicGljdHVyZSI6Imh0dHBzOi8vbGgzLmdvb2dsZXVzZXJjb250ZW50LmNvbS9hL0FDZzhvY0tGNU1teURfeGVwOEc0NnRDVm1OM0hVT1RGV3VLUTA5MElfUUZvZktlUWdCdHVzTms9czk2LWMiLCJnaXZlbl9uYW1lIjoiS0FVQU4iLCJmYW1pbHlfbmFtZSI6IkJJQU5DSElOSSBFU1RFVkFNIiwiaWF0IjoxNzkzMTAyNzk1LCJleHAiOjE3OTMxMDYzOTV9.Jd-g7rFU9lHc2nT0A8c_RV3rC04MeZcfszsD9WEAgnsmNAekShus_qPLdz9JcZXGyy_icEdgLnlfYtVFTtsDqcOiF-NLp2v32az0bIq1lK0TU5EoGusliCqmZ6V5x-n3vm3RQspsyF4lyMPButXqOpdO9c41FMGuDpMz8-d6m4e536H2f83q87bGG1mK4hoUZBvEzLqhQo8RUnFj9VdNmDxKs6FwwBElifFbq8kfflPHki7SH2YJmntcSHIMw2FU8Z2Fij9MtyRSe3LLoJffLXFvJ3llQewhm0BQVCR0gdlW-yM7a5F80bluDijapmNn5jqsFYTrRFhDHRqRCBZraQ"
+    }
+}
+[2026-10-27 13:05:55] userinfo | {
+    "id": "112131863436794404857",
+    "email": "4553457023@estudante.sed.sc.gov.br",
+    "verified_email": true,
+    "name": "KAUAN BIANCHINI ESTEVAM",
+    "given_name": "KAUAN",
+    "family_name": "BIANCHINI ESTEVAM",
+    "picture": "https:\/\/lh3.googleusercontent.com\/a\/ACg8ocKF5MmyD_xep8G46tCVmN3HUOTFWuKQ090I_QFofKeQgBtusNk=s96-c",
+    "hd": "estudante.sed.sc.gov.br"
+}
+[2026-10-27 13:05:55] foto_perfil | {
+    "remota": "https:\/\/lh3.googleusercontent.com\/a\/ACg8ocKF5MmyD_xep8G46tCVmN3HUOTFWuKQ090I_QFofKeQgBtusNk=s96-c",
+    "salva": "uploads\/img_da674dd393c2bed3.png",
+    "local": true
+}
+[2026-10-27 13:05:55] user_linked | {
+    "id": 14,
+    "email": "4553457023@estudante.sed.sc.gov.br",
+    "foto": "uploads\/img_fdc731ac7b8d6277.png",
+    "atualizou_foto": false
+}
+[2026-10-27 13:05:57] mail | {
+    "to": "4553457023@estudante.sed.sc.gov.br",
+    "ok": true,
+    "isNew": false
+}
+[2026-10-27 13:07:28] AUTH_START redirect_uri=http://localhost/octoart_php/google_callback.php
+[2026-10-27 13:07:33] === CALLBACK START ===
+[2026-10-27 13:07:33] GET | {
+    "state": "a0693e6dcd95ed6423046895c23ab143",
+    "iss": "https:\/\/accounts.google.com",
+    "code": "4\/0AUn6Hd9On5gcL7OVm8TvIMgn7YkxikeBxZNe9ZLIm_FL9rVz8VRmnqPcyhF6gqmxGJ985A",
+    "scope": "email profile https:\/\/www.googleapis.com\/auth\/userinfo.profile https:\/\/www.googleapis.com\/auth\/userinfo.email openid",
+    "authuser": "0",
+    "hd": "estudante.sed.sc.gov.br",
+    "prompt": "none"
+}
+[2026-10-27 13:07:33] SESSION_keys | [
+    "google_oauth_state",
+    "google_redirect_uri"
+]
+[2026-10-27 13:07:33] config | {
+    "redirect_uri": "http:\/\/localhost\/octoart_php\/google_callback.php",
+    "app_url": "http:\/\/localhost\/octoart_php",
+    "has_client_id": true,
+    "has_secret": true,
+    "client_id_prefix": "179150202497-r7cdrp6…",
+    "session_state": "a0693e6d…",
+    "got_state": "a0693e6d…"
+}
+[2026-10-27 13:07:33] token_request | {
+    "url": "https:\/\/oauth2.googleapis.com\/token",
+    "redirect_uri": "http:\/\/localhost\/octoart_php\/google_callback.php"
+}
+[2026-10-27 13:07:33] token_response | {
+    "http_ok": true,
+    "http_code": 200,
+    "error": "",
+    "body": {
+        "access_token": "ya29.a0AX07CmtFJEq6KvopBGWTu6tlv1QWUrSAs3mW39WB5ypn6TomCNa9tfIWMKkbe6bFiG1srKF8dtXj_kj24jhnvaQIQcXENN-9-VND2x23f8Xaig3XJxJ3NjB3QwzOgk3rhVAeGR6IAftzri9Xt8h1sCIkYCi3ZbXYOBjyXMttlHBhdJ5PE_SggKys9Pu8HLiSeNJVjtvP42khPTBh95WU5OGaLaGiw0uQrv3eMtsB7r4cMpR6_dUASJaM8enCZW-Iw-SHhoKfbld0USarZnWFRa6CqToaCgYKATESARESFQHGX2Miqf7u3gbFd1gs2zIfmK2LEw0290",
+        "expires_in": 3599,
+        "scope": "https:\/\/www.googleapis.com\/auth\/userinfo.email https:\/\/www.googleapis.com\/auth\/userinfo.profile openid",
+        "token_type": "Bearer",
+        "id_token": "eyJhbGciOiJSUzI1NiIsImtpZCI6Ijk0M2EzYTVkN2Q5MTk2MjVhNDU0ZTQ4OWI3NWMyOWFkYWI1N2FjYmEiLCJ0eXAiOiJKV1QifQ.eyJpc3MiOiJodHRwczovL2FjY291bnRzLmdvb2dsZS5jb20iLCJhenAiOiIxNzkxNTAyMDI0OTctcjdjZHJwNjc4YnFxYmhkcnE0dXQ4M3M3MzdpZ3Mzcm4uYXBwcy5nb29nbGV1c2VyY29udGVudC5jb20iLCJhdWQiOiIxNzkxNTAyMDI0OTctcjdjZHJwNjc4YnFxYmhkcnE0dXQ4M3M3MzdpZ3Mzcm4uYXBwcy5nb29nbGV1c2VyY29udGVudC5jb20iLCJzdWIiOiIxMTIxMzE4NjM0MzY3OTQ0MDQ4NTciLCJoZCI6ImVzdHVkYW50ZS5zZWQuc2MuZ292LmJyIiwiZW1haWwiOiI0NTUzNDU3MDIzQGVzdHVkYW50ZS5zZWQuc2MuZ292LmJyIiwiZW1haWxfdmVyaWZpZWQiOnRydWUsImF0X2hhc2giOiJLZW5zY3ZyRTlBQVRUVi1MVUtNZE9nIiwibmFtZSI6IktBVUFOIEJJQU5DSElOSSBFU1RFVkFNIiwicGljdHVyZSI6Imh0dHBzOi8vbGgzLmdvb2dsZXVzZXJjb250ZW50LmNvbS9hL0FDZzhvY0tGNU1teURfeGVwOEc0NnRDVm1OM0hVT1RGV3VLUTA5MElfUUZvZktlUWdCdHVzTms9czk2LWMiLCJnaXZlbl9uYW1lIjoiS0FVQU4iLCJmYW1pbHlfbmFtZSI6IkJJQU5DSElOSSBFU1RFVkFNIiwiaWF0IjoxNzkzMTAyODkzLCJleHAiOjE3OTMxMDY0OTN9.ZZ2Ufe3nZtuK2ZEpEl8qUJVGV-AIxC9kNrBfBmo31YKOsddXZVsDYl1GoCwdyz-_s_YUGclaCuRc3Bd0pxh4fjQkjBCgyVCWWSXqw7-watKDu2c7_ucn9r0pS8RDAQ5ZggpGGTViujMY5stm8oCX4NBFKYk4s4yYguPOx0MmwhvL5GV87VSlja7tWUw6UTWmn2KtFDigdNZAOJWS9x-bjS7ldSRsgBXCojuXagBgJTp0RsSNksQup0qbbmJsdZ5KrFrFFazQSdNzpDb0xl07JS9EN5sIfZYlrBVN8ZkC2O7g4MyA7WuihhRjdDb95A7I8rxIRtnYz53w2EOyvpQ07A"
+    }
+}
+[2026-10-27 13:07:33] userinfo | {
+    "id": "112131863436794404857",
+    "email": "4553457023@estudante.sed.sc.gov.br",
+    "verified_email": true,
+    "name": "KAUAN BIANCHINI ESTEVAM",
+    "given_name": "KAUAN",
+    "family_name": "BIANCHINI ESTEVAM",
+    "picture": "https:\/\/lh3.googleusercontent.com\/a\/ACg8ocKF5MmyD_xep8G46tCVmN3HUOTFWuKQ090I_QFofKeQgBtusNk=s96-c",
+    "hd": "estudante.sed.sc.gov.br"
+}
+[2026-10-27 13:07:34] foto_perfil | {
+    "remota": "https:\/\/lh3.googleusercontent.com\/a\/ACg8ocKF5MmyD_xep8G46tCVmN3HUOTFWuKQ090I_QFofKeQgBtusNk=s96-c",
+    "salva": "uploads\/img_4782b0f1b5846137.png",
+    "local": true
+}
+[2026-10-27 13:07:34] user_linked | {
+    "id": 14,
+    "email": "4553457023@estudante.sed.sc.gov.br",
+    "foto": "uploads\/img_fdc731ac7b8d6277.png",
+    "atualizou_foto": false
+}
+[2026-10-27 13:07:36] mail | {
+    "to": "4553457023@estudante.sed.sc.gov.br",
+    "ok": true,
+    "isNew": false
+}
+[2026-10-27 13:41:15] AUTH_START redirect_uri=http://localhost/octoart_php/google_callback.php
+[2026-10-27 13:41:26] === CALLBACK START ===
+[2026-10-27 13:41:26] GET | {
+    "state": "1d64e27a0881ac3b4275280039c315f6",
+    "iss": "https:\/\/accounts.google.com",
+    "code": "4\/0AXlqoi4C0eCtFTd1Uixdkmyqyjn-ztMlA09_3S_UVDRuLJUKbOdw1o5o29Uu8LaTsJsIDQ",
+    "scope": "email profile https:\/\/www.googleapis.com\/auth\/userinfo.profile openid https:\/\/www.googleapis.com\/auth\/userinfo.email",
+    "authuser": "0",
+    "hd": "estudante.sed.sc.gov.br",
+    "prompt": "none"
+}
+[2026-10-27 13:41:26] SESSION_keys | [
+    "google_oauth_state",
+    "google_redirect_uri"
+]
+[2026-10-27 13:41:26] config | {
+    "redirect_uri": "http:\/\/localhost\/octoart_php\/google_callback.php",
+    "app_url": "http:\/\/localhost\/octoart_php",
+    "has_client_id": true,
+    "has_secret": true,
+    "client_id_prefix": "179150202497-r7cdrp6…",
+    "session_state": "1d64e27a…",
+    "got_state": "1d64e27a…"
+}
+[2026-10-27 13:41:26] token_request | {
+    "url": "https:\/\/oauth2.googleapis.com\/token",
+    "redirect_uri": "http:\/\/localhost\/octoart_php\/google_callback.php"
+}
+[2026-10-27 13:41:26] token_response | {
+    "http_ok": true,
+    "http_code": 200,
+    "error": "",
+    "body": {
+        "access_token": "ya29.a0AX07CmuS3wBS9iSWRG8nV17uVl8DWLD5bz_qjBxENrBDe2bY_d3HLqqIqATKTbVjqu0WUEVcnaIHAy6PRIwbuNOYAZD5spSVnIOPHCcd4ODI6e7fWOJFy6G8tApwxEpurpZYx3oMX8zA9N88Qb1PDb-4scLLcnNCdjNy2qWRo2v634xnxg7WD8w2kQeg1mv7PQryCYpk97H6AXgDcxU19OM0BJNnMxf124uxLBqLp3AHh7hhJ2fTAWyYNNuWHjKhg7UVFQnVHKbJ3Fb2sj8xhpIIeB2iaCgYKATYSARESFQHGX2MiRKYwCMK_n5kn82fy3XEvNg0291",
+        "expires_in": 3599,
+        "scope": "https:\/\/www.googleapis.com\/auth\/userinfo.email https:\/\/www.googleapis.com\/auth\/userinfo.profile openid",
+        "token_type": "Bearer",
+        "id_token": "eyJhbGciOiJSUzI1NiIsImtpZCI6Ijk0M2EzYTVkN2Q5MTk2MjVhNDU0ZTQ4OWI3NWMyOWFkYWI1N2FjYmEiLCJ0eXAiOiJKV1QifQ.eyJpc3MiOiJodHRwczovL2FjY291bnRzLmdvb2dsZS5jb20iLCJhenAiOiIxNzkxNTAyMDI0OTctcjdjZHJwNjc4YnFxYmhkcnE0dXQ4M3M3MzdpZ3Mzcm4uYXBwcy5nb29nbGV1c2VyY29udGVudC5jb20iLCJhdWQiOiIxNzkxNTAyMDI0OTctcjdjZHJwNjc4YnFxYmhkcnE0dXQ4M3M3MzdpZ3Mzcm4uYXBwcy5nb29nbGV1c2VyY29udGVudC5jb20iLCJzdWIiOiIxMTIxMzE4NjM0MzY3OTQ0MDQ4NTciLCJoZCI6ImVzdHVkYW50ZS5zZWQuc2MuZ292LmJyIiwiZW1haWwiOiI0NTUzNDU3MDIzQGVzdHVkYW50ZS5zZWQuc2MuZ292LmJyIiwiZW1haWxfdmVyaWZpZWQiOnRydWUsImF0X2hhc2giOiJBV1lJVHdyWnNsUG4tckNHRmJmLXdnIiwibmFtZSI6IktBVUFOIEJJQU5DSElOSSBFU1RFVkFNIiwicGljdHVyZSI6Imh0dHBzOi8vbGgzLmdvb2dsZXVzZXJjb250ZW50LmNvbS9hL0FDZzhvY0tGNU1teURfeGVwOEc0NnRDVm1OM0hVT1RGV3VLUTA5MElfUUZvZktlUWdCdHVzTms9czk2LWMiLCJnaXZlbl9uYW1lIjoiS0FVQU4iLCJmYW1pbHlfbmFtZSI6IkJJQU5DSElOSSBFU1RFVkFNIiwiaWF0IjoxNzkzMTA0OTI2LCJleHAiOjE3OTMxMDg1MjZ9.Nd_W_8KCaMpONaoOSSbAJNo-FTS3P_sJnxXZjMihsb_teQP_UQu22b9A4vaXjO_SQrZH99d0SOOXw9ec58yw0SL2fKE-UdT2BGNzBlnyeo6qgR2mlCKImZAhNLYNGbCwf7E7govUz4Xzjj9n8nmwsgNRz-PNwdbaMmrjeJJcvuc419qv-ps23f5sZ0TA8QmZaOYHlnxmRodQkbBM7AYHF3zwC7cAfeF7SpnsclAzuz71_urqgGE3qYWS4eCPD_gkzCazhhCg0idVsrKpAwWj41izqB9n8zdDiMX9tB5fGRNlLiWJjpTBerj17o5SnpJG3eYC-v7i6LHJO6Z3O5xFoQ"
+    }
+}
+[2026-10-27 13:41:27] userinfo | {
+    "id": "112131863436794404857",
+    "email": "4553457023@estudante.sed.sc.gov.br",
+    "verified_email": true,
+    "name": "KAUAN BIANCHINI ESTEVAM",
+    "given_name": "KAUAN",
+    "family_name": "BIANCHINI ESTEVAM",
+    "picture": "https:\/\/lh3.googleusercontent.com\/a\/ACg8ocKF5MmyD_xep8G46tCVmN3HUOTFWuKQ090I_QFofKeQgBtusNk=s96-c",
+    "hd": "estudante.sed.sc.gov.br"
+}
+[2026-10-27 13:41:27] foto_perfil | {
+    "remota": "https:\/\/lh3.googleusercontent.com\/a\/ACg8ocKF5MmyD_xep8G46tCVmN3HUOTFWuKQ090I_QFofKeQgBtusNk=s96-c",
+    "salva": "uploads\/img_ab4d3f7ce861ab7c.png",
+    "local": true
+}
+[2026-10-27 13:41:27] user_created | {
+    "id": 19,
+    "email": "4553457023@estudante.sed.sc.gov.br",
+    "foto": "uploads\/img_ab4d3f7ce861ab7c.png"
+}
+[2026-10-27 13:41:29] mail | {
+    "to": "4553457023@estudante.sed.sc.gov.br",
+    "ok": true,
+    "isNew": true
+}
+[2026-10-27 15:00:23] AUTH_START redirect_uri=http://localhost/octoart_php/google_callback.php
+[2026-10-27 15:00:32] === CALLBACK START ===
+[2026-10-27 15:00:32] GET | {
+    "state": "875a538067859e3b08412bcbf109238c",
+    "iss": "https:\/\/accounts.google.com",
+    "code": "4\/0AUn6Hd_9XEhkfMRSSCsVtuwoqRO9coGMyWcEmFz18h23uXG3BuX2PJ4ZR_DKqchP801_pQ",
+    "scope": "email profile https:\/\/www.googleapis.com\/auth\/userinfo.profile https:\/\/www.googleapis.com\/auth\/userinfo.email openid",
+    "authuser": "0",
+    "hd": "estudante.sed.sc.gov.br",
+    "prompt": "consent"
+}
+[2026-10-27 15:00:32] SESSION_keys | [
+    "google_oauth_state",
+    "google_redirect_uri"
+]
+[2026-10-27 15:00:32] config | {
+    "redirect_uri": "http:\/\/localhost\/octoart_php\/google_callback.php",
+    "app_url": "http:\/\/localhost\/octoart_php",
+    "has_client_id": true,
+    "has_secret": true,
+    "client_id_prefix": "179150202497-r7cdrp6…",
+    "session_state": "875a5380…",
+    "got_state": "875a5380…"
+}
+[2026-10-27 15:00:32] token_request | {
+    "url": "https:\/\/oauth2.googleapis.com\/token",
+    "redirect_uri": "http:\/\/localhost\/octoart_php\/google_callback.php"
+}
+[2026-10-27 15:00:33] token_response | {
+    "http_ok": true,
+    "http_code": 200,
+    "error": "",
+    "body": {
+        "access_token": "ya29.a0AehfTOlZfIkxxWsgO8bK-3NjScZNR-aSmnxx-7EvvOzQpQJSYBFOWE6kOSufmnf7TutOMCHsLnawI3fj50Lf-o_blj88eqox3DMS81RBbFzjiGgN9V108Yd29hCZ0kTW08bCOCxsO4gcq2TI3q68wpzrPttIGa7YZg5S-6kL1FES25e9xs2VmhM93FfHPeIExr_WH44aCgYKAS4SARESFQHGX2Mi011dqVNOuNl0deMJ7t-mmg0206",
+        "expires_in": 3599,
+        "scope": "https:\/\/www.googleapis.com\/auth\/userinfo.email openid https:\/\/www.googleapis.com\/auth\/userinfo.profile",
+        "token_type": "Bearer",
+        "id_token": "eyJhbGciOiJSUzI1NiIsImtpZCI6Ijk0M2EzYTVkN2Q5MTk2MjVhNDU0ZTQ4OWI3NWMyOWFkYWI1N2FjYmEiLCJ0eXAiOiJKV1QifQ.eyJpc3MiOiJodHRwczovL2FjY291bnRzLmdvb2dsZS5jb20iLCJhenAiOiIxNzkxNTAyMDI0OTctcjdjZHJwNjc4YnFxYmhkcnE0dXQ4M3M3MzdpZ3Mzcm4uYXBwcy5nb29nbGV1c2VyY29udGVudC5jb20iLCJhdWQiOiIxNzkxNTAyMDI0OTctcjdjZHJwNjc4YnFxYmhkcnE0dXQ4M3M3MzdpZ3Mzcm4uYXBwcy5nb29nbGV1c2VyY29udGVudC5jb20iLCJzdWIiOiIxMTIxMzE4NjM0MzY3OTQ0MDQ4NTciLCJoZCI6ImVzdHVkYW50ZS5zZWQuc2MuZ292LmJyIiwiZW1haWwiOiI0NTUzNDU3MDIzQGVzdHVkYW50ZS5zZWQuc2MuZ292LmJyIiwiZW1haWxfdmVyaWZpZWQiOnRydWUsImF0X2hhc2giOiJTaklWRXoyamlYVUdEd3lCVHJsaUhBIiwibmFtZSI6IktBVUFOIEJJQU5DSElOSSBFU1RFVkFNIiwicGljdHVyZSI6Imh0dHBzOi8vbGgzLmdvb2dsZXVzZXJjb250ZW50LmNvbS9hL0FDZzhvY0tGNU1teURfeGVwOEc0NnRDVm1OM0hVT1RGV3VLUTA5MElfUUZvZktlUWdCdHVzTms9czk2LWMiLCJnaXZlbl9uYW1lIjoiS0FVQU4iLCJmYW1pbHlfbmFtZSI6IkJJQU5DSElOSSBFU1RFVkFNIiwiaWF0IjoxNzkzMTA5NjczLCJleHAiOjE3OTMxMTMyNzN9.E-uzpSoLiVaP8rynDKtHA3hNDt8kSLe8cmfVECr8SaDcdu0zDhCj2xn6fioFJNfvPKT3MVRTkEblnKy7SKO7FjNO5UnwTEdUgW-BvY0wkWHkwRETuFZk8FTl0yYPCs8cQMqqWiM3D_OGmmD8YZr2Qz1TvBbl2FPbaQvMdBpMjLgDoA0TK9O4EbSkOg8oayycZUBiRsYbfc6lMX3nAWEg_D612zt93cH12ZJBRUP78Lxlb-fQw557FZ4kob_FWg1z4-k7_dJpsEp5IaJMEu72NEhqnIjBW4IRWM3HS-LA5uJEV88PWHIN4LCc-gc2KzGCc122Up7ELfat_juJ1pCtZg"
+    }
+}
+[2026-10-27 15:00:33] userinfo | {
+    "id": "112131863436794404857",
+    "email": "4553457023@estudante.sed.sc.gov.br",
+    "verified_email": true,
+    "name": "KAUAN BIANCHINI ESTEVAM",
+    "given_name": "KAUAN",
+    "family_name": "BIANCHINI ESTEVAM",
+    "picture": "https:\/\/lh3.googleusercontent.com\/a\/ACg8ocKF5MmyD_xep8G46tCVmN3HUOTFWuKQ090I_QFofKeQgBtusNk=s96-c",
+    "hd": "estudante.sed.sc.gov.br"
+}
+[2026-10-27 15:00:34] foto_perfil | {
+    "remota": "https:\/\/lh3.googleusercontent.com\/a\/ACg8ocKF5MmyD_xep8G46tCVmN3HUOTFWuKQ090I_QFofKeQgBtusNk=s96-c",
+    "salva": "uploads\/img_6b34865b1b26163c.png",
+    "local": true
+}
+[2026-10-27 15:00:34] user_linked | {
+    "id": 19,
+    "email": "4553457023@estudante.sed.sc.gov.br",
+    "foto": "uploads\/img_ab4d3f7ce861ab7c.png",
+    "atualizou_foto": false
+}
+[2026-10-27 15:00:36] mail | {
+    "to": "4553457023@estudante.sed.sc.gov.br",
+    "ok": true,
+    "isNew": false
+}
+[2026-11-11 19:57:14] AUTH_START redirect_uri=http://localhost/octoart_php/google_callback.php
+[2026-11-11 19:58:07] === CALLBACK START ===
+[2026-11-11 19:58:07] GET | {
+    "state": "7ae513ae601d3630b00ac9bde61475c9",
+    "iss": "https:\/\/accounts.google.com",
+    "code": "4\/0AUn6Hd8mCHjFFX2ajSfGunJ2C0JdgjO2nUM47Hwa-YtWn5o4EZcoMHxdq3s9lDCBG81etA",
+    "scope": "email profile https:\/\/www.googleapis.com\/auth\/userinfo.profile https:\/\/www.googleapis.com\/auth\/userinfo.email openid",
+    "authuser": "0",
+    "hd": "estudante.sed.sc.gov.br",
+    "prompt": "consent"
+}
+[2026-11-11 19:58:07] SESSION_keys | [
+    "google_oauth_state",
+    "google_redirect_uri"
+]
+[2026-11-11 19:58:07] config | {
+    "redirect_uri": "http:\/\/localhost\/octoart_php\/google_callback.php",
+    "app_url": "http:\/\/localhost\/octoart_php",
+    "has_client_id": true,
+    "has_secret": true,
+    "client_id_prefix": "179150202497-r7cdrp6…",
+    "session_state": "7ae513ae…",
+    "got_state": "7ae513ae…"
+}
+[2026-11-11 19:58:07] token_request | {
+    "url": "https:\/\/oauth2.googleapis.com\/token",
+    "redirect_uri": "http:\/\/localhost\/octoart_php\/google_callback.php"
+}
+[2026-11-11 19:58:08] token_response | {
+    "http_ok": true,
+    "http_code": 200,
+    "error": "",
+    "body": {
+        "access_token": "ya29.a0AehfTOkJPt585jnD6h-3ov-Cmmq-F_1c2eHySoPufow4ytboajv6Jw1GVBkv61l8ghppjmXqSDGU1o0ncNV7fbdo8IEApHmJy6ile--6bfem6TWkK9OCoIGpxYIwYf0PQpRU6RR4qJP2p0UB2uRbGraEQjcqfet6ZcnY8ZRggEq2c0dbezOEnaXEwP65sMONHdj-3xYaCgYKATESARISFQHGX2MiOTUVDfpMipffUcwsvSnRPQ0206",
+        "expires_in": 3599,
+        "scope": "https:\/\/www.googleapis.com\/auth\/userinfo.profile openid https:\/\/www.googleapis.com\/auth\/userinfo.email",
+        "token_type": "Bearer",
+        "id_token": "eyJhbGciOiJSUzI1NiIsImtpZCI6Ijk0M2EzYTVkN2Q5MTk2MjVhNDU0ZTQ4OWI3NWMyOWFkYWI1N2FjYmEiLCJ0eXAiOiJKV1QifQ.eyJpc3MiOiJodHRwczovL2FjY291bnRzLmdvb2dsZS5jb20iLCJhenAiOiIxNzkxNTAyMDI0OTctcjdjZHJwNjc4YnFxYmhkcnE0dXQ4M3M3MzdpZ3Mzcm4uYXBwcy5nb29nbGV1c2VyY29udGVudC5jb20iLCJhdWQiOiIxNzkxNTAyMDI0OTctcjdjZHJwNjc4YnFxYmhkcnE0dXQ4M3M3MzdpZ3Mzcm4uYXBwcy5nb29nbGV1c2VyY29udGVudC5jb20iLCJzdWIiOiIxMDUyMDE0MTY2MjMxMDA2OTY0ODQiLCJoZCI6ImVzdHVkYW50ZS5zZWQuc2MuZ292LmJyIiwiZW1haWwiOiI0NTU0Mjk2NDIyQGVzdHVkYW50ZS5zZWQuc2MuZ292LmJyIiwiZW1haWxfdmVyaWZpZWQiOnRydWUsImF0X2hhc2giOiJLSVoyNDlBcDM1NUVCQjFDRVl3djZnIiwibmFtZSI6IkFORFJJRUxJIENSSVNUSU5FIEpPVkVOQ0lPIERBIFNJTFZBIiwicGljdHVyZSI6Imh0dHBzOi8vbGgzLmdvb2dsZXVzZXJjb250ZW50LmNvbS9hL0FDZzhvY0xfNzRUZDNhZzlXVUpJMjhzREVtZ1BYeU1RTmRub2RLWURmU0xoT1RQY2pWbnMyZ0ppPXM5Ni1jIiwiZ2l2ZW5fbmFtZSI6IkFORFJJRUxJIiwiZmFtaWx5X25hbWUiOiJDUklTVElORSBKT1ZFTkNJTyBEQSBTSUxWQSIsImlhdCI6MTc5NDQyMzQ4OCwiZXhwIjoxNzk0NDI3MDg4fQ.CYaHYkEzlve1ef_FT6SLeGEd92On2tlHtA8D8pquLXTzE7lumdXQkyQl0iKZcFpsyrjN5yT5xrHEKQMAzNicxVOYvh2_vi4kimOvNxfbYU4ysW4DVi1yMdBsrJAJ0Ylm3dh97ndKIPJCSWf2_Fn5nZB0mvecmeNSyml9TD74qAK5Sgq07d4-UMLM5vXuRM6IeNxedQLvGlu8I5oeRWDbUi9lRfb-XaSbgc2TkAa1dGcbNGeMXUsVkBtKONx6aAjCZZ6HCUzs6X0-aUCsqHtevcolC02c7sj6EroK1BYuEPwBr2QPssp87qz9CV9XpR_pb-qvQ0meWCO3G9D2xIJ8UA"
+    }
+}
+[2026-11-11 19:58:08] userinfo | {
+    "id": "105201416623100696484",
+    "email": "4554296422@estudante.sed.sc.gov.br",
+    "verified_email": true,
+    "name": "ANDRIELI CRISTINE JOVENCIO DA SILVA",
+    "given_name": "ANDRIELI",
+    "family_name": "CRISTINE JOVENCIO DA SILVA",
+    "picture": "https:\/\/lh3.googleusercontent.com\/a\/ACg8ocL_74Td3ag9WUJI28sDEmgPXyMQNdnodKYDfSLhOTPcjVns2gJi=s96-c",
+    "hd": "estudante.sed.sc.gov.br"
+}
+[2026-11-11 19:58:09] foto_perfil | {
+    "remota": "https:\/\/lh3.googleusercontent.com\/a\/ACg8ocL_74Td3ag9WUJI28sDEmgPXyMQNdnodKYDfSLhOTPcjVns2gJi=s96-c",
+    "salva": "uploads\/img_22a0b4dcca6e6081.jpg",
+    "local": true
+}
+[2026-11-11 19:58:09] user_created | {
+    "id": 14,
+    "email": "4554296422@estudante.sed.sc.gov.br",
+    "foto": "uploads\/img_22a0b4dcca6e6081.jpg"
+}
+[2026-11-11 19:58:11] mail | {
+    "to": "4554296422@estudante.sed.sc.gov.br",
+    "ok": true,
+    "isNew": true
+}
+[2026-11-11 20:03:40] AUTH_START redirect_uri=http://localhost/octoart_php/google_callback.php
+[2026-11-11 20:03:45] === CALLBACK START ===
+[2026-11-11 20:03:45] GET | {
+    "state": "387f1f8fe0179eb040539325f734059f",
+    "iss": "https:\/\/accounts.google.com",
+    "code": "4\/0AUn6Hd_Y1DWSt1DGdxgbVsZNThFgFz4xgHRjTT5w1zBv3j-MTeLTpTfrvI2zg3luUxbN4g",
+    "scope": "email profile https:\/\/www.googleapis.com\/auth\/userinfo.profile openid https:\/\/www.googleapis.com\/auth\/userinfo.email",
+    "authuser": "0",
+    "hd": "estudante.sed.sc.gov.br",
+    "prompt": "none"
+}
+[2026-11-11 20:03:45] SESSION_keys | [
+    "google_oauth_state",
+    "google_redirect_uri"
+]
+[2026-11-11 20:03:45] config | {
+    "redirect_uri": "http:\/\/localhost\/octoart_php\/google_callback.php",
+    "app_url": "http:\/\/localhost\/octoart_php",
+    "has_client_id": true,
+    "has_secret": true,
+    "client_id_prefix": "179150202497-r7cdrp6…",
+    "session_state": "387f1f8f…",
+    "got_state": "387f1f8f…"
+}
+[2026-11-11 20:03:45] token_request | {
+    "url": "https:\/\/oauth2.googleapis.com\/token",
+    "redirect_uri": "http:\/\/localhost\/octoart_php\/google_callback.php"
+}
+[2026-11-11 20:03:46] token_response | {
+    "http_ok": true,
+    "http_code": 200,
+    "error": "",
+    "body": {
+        "access_token": "ya29.a0AehfTOndeASqohRDPttWzVKRG8nfGXCN2Qipp6u0pgQC12zmYbKDupw0FPy7KJsaPbdDKDvg7N2BuNsyaOa9YI37Kl0rXURSGzGGMQ87YTlfQEcwLYODRRqXvf_jgYBc-2Yk54C3PISC0zHzi3rUQzzQQn5CtdwjQ_RlQQX-qM4USTe_0wi0pPP4YOzivMBAxjw5QHsn08UVc8wvXb3jVzUQc4WzK1ZXaRSmRTGKyXF2NnnD1RlIgeGXd3IDHO72I8WcC75H_LwLUiLMHIiTHI0BrJMaCgYKAekSARISFQHGX2Mi7HTEAo3reHoGQNOhIkC6bA0290",
+        "expires_in": 3598,
+        "scope": "openid https:\/\/www.googleapis.com\/auth\/userinfo.profile https:\/\/www.googleapis.com\/auth\/userinfo.email",
+        "token_type": "Bearer",
+        "id_token": "eyJhbGciOiJSUzI1NiIsImtpZCI6Ijk0M2EzYTVkN2Q5MTk2MjVhNDU0ZTQ4OWI3NWMyOWFkYWI1N2FjYmEiLCJ0eXAiOiJKV1QifQ.eyJpc3MiOiJodHRwczovL2FjY291bnRzLmdvb2dsZS5jb20iLCJhenAiOiIxNzkxNTAyMDI0OTctcjdjZHJwNjc4YnFxYmhkcnE0dXQ4M3M3MzdpZ3Mzcm4uYXBwcy5nb29nbGV1c2VyY29udGVudC5jb20iLCJhdWQiOiIxNzkxNTAyMDI0OTctcjdjZHJwNjc4YnFxYmhkcnE0dXQ4M3M3MzdpZ3Mzcm4uYXBwcy5nb29nbGV1c2VyY29udGVudC5jb20iLCJzdWIiOiIxMDUyMDE0MTY2MjMxMDA2OTY0ODQiLCJoZCI6ImVzdHVkYW50ZS5zZWQuc2MuZ292LmJyIiwiZW1haWwiOiI0NTU0Mjk2NDIyQGVzdHVkYW50ZS5zZWQuc2MuZ292LmJyIiwiZW1haWxfdmVyaWZpZWQiOnRydWUsImF0X2hhc2giOiJRaTI3VHNkazJ2ZzVRSUxaLW5IT2dRIiwibmFtZSI6IkFORFJJRUxJIENSSVNUSU5FIEpPVkVOQ0lPIERBIFNJTFZBIiwicGljdHVyZSI6Imh0dHBzOi8vbGgzLmdvb2dsZXVzZXJjb250ZW50LmNvbS9hL0FDZzhvY0xfNzRUZDNhZzlXVUpJMjhzREVtZ1BYeU1RTmRub2RLWURmU0xoT1RQY2pWbnMyZ0ppPXM5Ni1jIiwiZ2l2ZW5fbmFtZSI6IkFORFJJRUxJIiwiZmFtaWx5X25hbWUiOiJDUklTVElORSBKT1ZFTkNJTyBEQSBTSUxWQSIsImlhdCI6MTc5NDQyMzgyNiwiZXhwIjoxNzk0NDI3NDI2fQ.WLj5-h1v4YzC5cH7YZw33nTcbOWkGhg3UMjWp5HEA12XxYfAFrrcci1vLNbE8SdRrdP4T6-bxXl1Uj0hWdUz3dj2oofaQ8AFEVCiq1m-d7MszN78StYod_2j2YygTnwNala14-VHEo23qRn6JW2ba3iLMU9zUDuHuBhGYo2fuHX4VwyxG5LCV7EXCnU7IWISYqkoDxca_27NZMkV9S8_2OCJi0yAHSvXn3XBI6-B0SvCnrrMnYJ_9-YC8n9_CpTy93HP-6NStpWLEKuarIZaC8IuAbf2FYrK6D6uJLzVUENWucJjPXSxHa-IKwl591S-7FkVghmX72fb8gPrHl8UJA"
+    }
+}
+[2026-11-11 20:03:46] userinfo | {
+    "id": "105201416623100696484",
+    "email": "4554296422@estudante.sed.sc.gov.br",
+    "verified_email": true,
+    "name": "ANDRIELI CRISTINE JOVENCIO DA SILVA",
+    "given_name": "ANDRIELI",
+    "family_name": "CRISTINE JOVENCIO DA SILVA",
+    "picture": "https:\/\/lh3.googleusercontent.com\/a\/ACg8ocL_74Td3ag9WUJI28sDEmgPXyMQNdnodKYDfSLhOTPcjVns2gJi=s96-c",
+    "hd": "estudante.sed.sc.gov.br"
+}
+[2026-11-11 20:03:47] foto_perfil | {
+    "remota": "https:\/\/lh3.googleusercontent.com\/a\/ACg8ocL_74Td3ag9WUJI28sDEmgPXyMQNdnodKYDfSLhOTPcjVns2gJi=s96-c",
+    "salva": "uploads\/img_66c2ec79f8d817df.jpg",
+    "local": true
+}
+[2026-11-11 20:03:47] user_linked | {
+    "id": 14,
+    "email": "4554296422@estudante.sed.sc.gov.br",
+    "foto": "uploads\/img_22a0b4dcca6e6081.jpg",
+    "atualizou_foto": false
+}
+[2026-11-11 20:03:49] mail | {
+    "to": "4554296422@estudante.sed.sc.gov.br",
+    "ok": true,
+    "isNew": false
+}
+[2026-11-11 20:13:10] AUTH_START redirect_uri=http://localhost/octoart_php/google_callback.php
+[2026-11-11 20:13:17] === CALLBACK START ===
+[2026-11-11 20:13:17] GET | {
+    "state": "dc5ad81aaf5431e7c5d3704846d2c097",
+    "iss": "https:\/\/accounts.google.com",
+    "code": "4\/0AUn6Hd97m3HXpHjq8cJ62HuKQ3SYx4M6AQIBKFo0378440ny5OUa6eqTyvONA7r2SknLZA",
+    "scope": "email profile https:\/\/www.googleapis.com\/auth\/userinfo.profile https:\/\/www.googleapis.com\/auth\/userinfo.email openid",
+    "authuser": "0",
+    "hd": "estudante.sed.sc.gov.br",
+    "prompt": "none"
+}
+[2026-11-11 20:13:17] SESSION_keys | [
+    "google_oauth_state",
+    "google_redirect_uri"
+]
+[2026-11-11 20:13:17] config | {
+    "redirect_uri": "http:\/\/localhost\/octoart_php\/google_callback.php",
+    "app_url": "http:\/\/localhost\/octoart_php",
+    "has_client_id": true,
+    "has_secret": true,
+    "client_id_prefix": "179150202497-r7cdrp6…",
+    "session_state": "dc5ad81a…",
+    "got_state": "dc5ad81a…"
+}
+[2026-11-11 20:13:17] token_request | {
+    "url": "https:\/\/oauth2.googleapis.com\/token",
+    "redirect_uri": "http:\/\/localhost\/octoart_php\/google_callback.php"
+}
+[2026-11-11 20:13:18] token_response | {
+    "http_ok": true,
+    "http_code": 200,
+    "error": "",
+    "body": {
+        "access_token": "ya29.a0AehfTOkrwETlOT_-Wm_BwJetAyairgyTzHJt0G22jCEP22WQP6xHbfecUJduISaAU6mYlYQo_nL2cm6DiQwj8pam7pGPxwVzIQvAMD4Jdb62sBOivyItEgtNxury67RrTO1wvorhlPQTJ5S5uhRmX5UaNChwRWBJwOM1ZucvW2wCB0izV5RMBq8rcvtnBaVncVA2ztoqlAD99Z_hi1c6cgcJiymVMxJrrokqR0CSCCJV8rzlw0rSgkhzNFSLxa6l-atxypn4FmYetl22WHRDU_qCVRsaCgYKAd4SARISFQHGX2Mi6bWaSYcT6YtvfVXD1ZN1OQ0290",
+        "expires_in": 3599,
+        "scope": "openid https:\/\/www.googleapis.com\/auth\/userinfo.profile https:\/\/www.googleapis.com\/auth\/userinfo.email",
+        "token_type": "Bearer",
+        "id_token": "eyJhbGciOiJSUzI1NiIsImtpZCI6Ijk0M2EzYTVkN2Q5MTk2MjVhNDU0ZTQ4OWI3NWMyOWFkYWI1N2FjYmEiLCJ0eXAiOiJKV1QifQ.eyJpc3MiOiJodHRwczovL2FjY291bnRzLmdvb2dsZS5jb20iLCJhenAiOiIxNzkxNTAyMDI0OTctcjdjZHJwNjc4YnFxYmhkcnE0dXQ4M3M3MzdpZ3Mzcm4uYXBwcy5nb29nbGV1c2VyY29udGVudC5jb20iLCJhdWQiOiIxNzkxNTAyMDI0OTctcjdjZHJwNjc4YnFxYmhkcnE0dXQ4M3M3MzdpZ3Mzcm4uYXBwcy5nb29nbGV1c2VyY29udGVudC5jb20iLCJzdWIiOiIxMDUyMDE0MTY2MjMxMDA2OTY0ODQiLCJoZCI6ImVzdHVkYW50ZS5zZWQuc2MuZ292LmJyIiwiZW1haWwiOiI0NTU0Mjk2NDIyQGVzdHVkYW50ZS5zZWQuc2MuZ292LmJyIiwiZW1haWxfdmVyaWZpZWQiOnRydWUsImF0X2hhc2giOiJKNHZENFRHVkF4aXVFZktBVWlwX2tRIiwibmFtZSI6IkFORFJJRUxJIENSSVNUSU5FIEpPVkVOQ0lPIERBIFNJTFZBIiwicGljdHVyZSI6Imh0dHBzOi8vbGgzLmdvb2dsZXVzZXJjb250ZW50LmNvbS9hL0FDZzhvY0xfNzRUZDNhZzlXVUpJMjhzREVtZ1BYeU1RTmRub2RLWURmU0xoT1RQY2pWbnMyZ0ppPXM5Ni1jIiwiZ2l2ZW5fbmFtZSI6IkFORFJJRUxJIiwiZmFtaWx5X25hbWUiOiJDUklTVElORSBKT1ZFTkNJTyBEQSBTSUxWQSIsImlhdCI6MTc5NDQyNDM5OCwiZXhwIjoxNzk0NDI3OTk4fQ.FyvkKD-ZZuvr4j63AEXx68zQ8AK4gZJ1P1Krfl8k5HOxkJno8OyaWwlNgjhQ_hXO_MdkUl2juq3i_aiqoF3h_VZas8C6FBCStnYpD7LORLHTJZT2iFKoM4r-t3oYx5xdS2e1Tjid1hinvT3irHX-GlWv4LYe24cKjGRl4LA5IkJtdYNefadwOIJaKeMByVF3Bz8UXO48J64oNGRFKJyvZqxDrYsnV2Xih42R6V0bOSQ4-yKPPTgpReOssfF_96SdvDlQpLWzxMwn3IXtEA4hyMBpzKd2jIxQUfP_K4EiNPhaIwnSDVzBNnzohmo9gJjv5loxol1r0xJZG05k5aObUg"
+    }
+}
+[2026-11-11 20:13:18] userinfo | {
+    "id": "105201416623100696484",
+    "email": "4554296422@estudante.sed.sc.gov.br",
+    "verified_email": true,
+    "name": "ANDRIELI CRISTINE JOVENCIO DA SILVA",
+    "given_name": "ANDRIELI",
+    "family_name": "CRISTINE JOVENCIO DA SILVA",
+    "picture": "https:\/\/lh3.googleusercontent.com\/a\/ACg8ocL_74Td3ag9WUJI28sDEmgPXyMQNdnodKYDfSLhOTPcjVns2gJi=s96-c",
+    "hd": "estudante.sed.sc.gov.br"
+}
+[2026-11-11 20:13:19] foto_perfil | {
+    "remota": "https:\/\/lh3.googleusercontent.com\/a\/ACg8ocL_74Td3ag9WUJI28sDEmgPXyMQNdnodKYDfSLhOTPcjVns2gJi=s96-c",
+    "salva": "uploads\/img_2d254d70c9ef5474.jpg",
+    "local": true
+}
+[2026-11-11 20:13:19] user_linked | {
+    "id": 14,
+    "email": "4554296422@estudante.sed.sc.gov.br",
+    "foto": "uploads\/img_22a0b4dcca6e6081.jpg",
+    "atualizou_foto": false
+}
+[2026-11-11 20:13:21] mail | {
+    "to": "4554296422@estudante.sed.sc.gov.br",
+    "ok": true,
+    "isNew": false
+}
+[2026-11-11 20:17:05] AUTH_START redirect_uri=http://localhost/octoart_php/google_callback.php
+[2026-11-11 20:17:11] === CALLBACK START ===
+[2026-11-11 20:17:11] GET | {
+    "state": "36a91e3eef561a2242abe5d7e077da17",
+    "iss": "https:\/\/accounts.google.com",
+    "code": "4\/0AUn6Hd8UbbYwFter2GhH0a9DJh3cMRLTn_zUfXaPYh1uEieJVSpesv8CXsPaaY9Klshd9Q",
+    "scope": "email profile https:\/\/www.googleapis.com\/auth\/userinfo.profile openid https:\/\/www.googleapis.com\/auth\/userinfo.email",
+    "authuser": "0",
+    "hd": "estudante.sed.sc.gov.br",
+    "prompt": "none"
+}
+[2026-11-11 20:17:11] SESSION_keys | [
+    "google_oauth_state",
+    "google_redirect_uri"
+]
+[2026-11-11 20:17:11] config | {
+    "redirect_uri": "http:\/\/localhost\/octoart_php\/google_callback.php",
+    "app_url": "http:\/\/localhost\/octoart_php",
+    "has_client_id": true,
+    "has_secret": true,
+    "client_id_prefix": "179150202497-r7cdrp6…",
+    "session_state": "36a91e3e…",
+    "got_state": "36a91e3e…"
+}
+[2026-11-11 20:17:11] token_request | {
+    "url": "https:\/\/oauth2.googleapis.com\/token",
+    "redirect_uri": "http:\/\/localhost\/octoart_php\/google_callback.php"
+}
+[2026-11-11 20:17:12] token_response | {
+    "http_ok": true,
+    "http_code": 200,
+    "error": "",
+    "body": {
+        "access_token": "ya29.a0AehfTOkM29TSY_JXfbZ0CduKM4kdzeowauEs_vJNkAIW5oPQLaGm65F05SW4DPtdol1BoeRx1qm3-cSPVS-MqiFGyOzEZAxosC2m6jatetZakaydOd89FnVjcHkPNYUf07F8PWNaGd0rYKNcCUkdR1jU6rAvFqSVeYKOq-ebG4HV1-fp4PZycvgzgPnJWxHlgX8vLQYb57F06ZgpvpL7xyCgOBIQcS7BILlplHqcMTumQf8PkfZkAeZVGsha6AJZEKIIAF4zMbqOK4T5pmg3INXW_QaCgYKAfASARISFQHGX2MihinzmGjS8Tk0OyGOTks4ww0289",
+        "expires_in": 3599,
+        "scope": "openid https:\/\/www.googleapis.com\/auth\/userinfo.email https:\/\/www.googleapis.com\/auth\/userinfo.profile",
+        "token_type": "Bearer",
+        "id_token": "eyJhbGciOiJSUzI1NiIsImtpZCI6Ijk0M2EzYTVkN2Q5MTk2MjVhNDU0ZTQ4OWI3NWMyOWFkYWI1N2FjYmEiLCJ0eXAiOiJKV1QifQ.eyJpc3MiOiJodHRwczovL2FjY291bnRzLmdvb2dsZS5jb20iLCJhenAiOiIxNzkxNTAyMDI0OTctcjdjZHJwNjc4YnFxYmhkcnE0dXQ4M3M3MzdpZ3Mzcm4uYXBwcy5nb29nbGV1c2VyY29udGVudC5jb20iLCJhdWQiOiIxNzkxNTAyMDI0OTctcjdjZHJwNjc4YnFxYmhkcnE0dXQ4M3M3MzdpZ3Mzcm4uYXBwcy5nb29nbGV1c2VyY29udGVudC5jb20iLCJzdWIiOiIxMDUyMDE0MTY2MjMxMDA2OTY0ODQiLCJoZCI6ImVzdHVkYW50ZS5zZWQuc2MuZ292LmJyIiwiZW1haWwiOiI0NTU0Mjk2NDIyQGVzdHVkYW50ZS5zZWQuc2MuZ292LmJyIiwiZW1haWxfdmVyaWZpZWQiOnRydWUsImF0X2hhc2giOiI2YjlWNnlIekdMNEU1UWtDaE0teWhBIiwibmFtZSI6IkFORFJJRUxJIENSSVNUSU5FIEpPVkVOQ0lPIERBIFNJTFZBIiwicGljdHVyZSI6Imh0dHBzOi8vbGgzLmdvb2dsZXVzZXJjb250ZW50LmNvbS9hL0FDZzhvY0xfNzRUZDNhZzlXVUpJMjhzREVtZ1BYeU1RTmRub2RLWURmU0xoT1RQY2pWbnMyZ0ppPXM5Ni1jIiwiZ2l2ZW5fbmFtZSI6IkFORFJJRUxJIiwiZmFtaWx5X25hbWUiOiJDUklTVElORSBKT1ZFTkNJTyBEQSBTSUxWQSIsImlhdCI6MTc5NDQyNDYzMSwiZXhwIjoxNzk0NDI4MjMxfQ.oIBgTBh-Cmdox9mGG9Wvim5Sr-oVGpIzD-x-xYTXVZMFn0nV5dHcnJ8WkZsuK00KwF0FLEtXioDM9ZcVIIUK_fPOvyrHkV-A9dE4hQcaF1bOMBaRr7FCCP5g4rccUCa7G1ilxUsF5Dsq9IaRqL2pOvxpBaykUX7KcIZr-y970F-4W-pGNGsWFHct2JEU5iXJZA_C2iS99VJ0eU70dFhzKUnJiQ-Ax6OwuP8Kzp_agcx1rPjJzAhRwRZPTktvmJs9ZlG0uHtPS63sCy7TuWd1sNZ1REkSvREHNMDuOQbP63Lqb6IlRlUvRUhgwOzF6Wi-jipJE2AjfHI2EC9B8qIUHQ"
+    }
+}
+[2026-11-11 20:17:12] userinfo | {
+    "id": "105201416623100696484",
+    "email": "4554296422@estudante.sed.sc.gov.br",
+    "verified_email": true,
+    "name": "ANDRIELI CRISTINE JOVENCIO DA SILVA",
+    "given_name": "ANDRIELI",
+    "family_name": "CRISTINE JOVENCIO DA SILVA",
+    "picture": "https:\/\/lh3.googleusercontent.com\/a\/ACg8ocL_74Td3ag9WUJI28sDEmgPXyMQNdnodKYDfSLhOTPcjVns2gJi=s96-c",
+    "hd": "estudante.sed.sc.gov.br"
+}
+[2026-11-11 20:17:12] foto_perfil | {
+    "remota": "https:\/\/lh3.googleusercontent.com\/a\/ACg8ocL_74Td3ag9WUJI28sDEmgPXyMQNdnodKYDfSLhOTPcjVns2gJi=s96-c",
+    "salva": "uploads\/img_318bea9ca04ace18.jpg",
+    "local": true
+}
+[2026-11-11 20:17:12] user_linked | {
+    "id": 14,
+    "email": "4554296422@estudante.sed.sc.gov.br",
+    "foto": "uploads\/img_22a0b4dcca6e6081.jpg",
+    "atualizou_foto": false
+}
+[2026-11-11 20:17:14] mail | {
+    "to": "4554296422@estudante.sed.sc.gov.br",
+    "ok": true,
+    "isNew": false
+}

@@ -1,0 +1,7 @@
+[2026-10-02 16:14:52]
+To: ta@gmail.com
+Subject: Bem-vindo(a) ao OctoArt!
+
+Conta criada no OctoArt. Acesse: http://localhost/octoart_php/login.php
+
+---
