@@ -179,7 +179,7 @@ if ($email === '' || $gid === '') {
     google_fail('Não foi possível ler e-mail/ID da conta Google.', ['userinfo' => $info]);
 }
 
-// Baixa a foto do Google para uploads/ (evita URL longa/intermitente que some)
+// Baixa a foto do Google e guarda no banco (evita URL longa/intermitente que some)
 $foto = null;
 if ($fotoRemota) {
     $local = download_remote_image($fotoRemota);

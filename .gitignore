@@ -1,0 +1,8 @@
+# Imagens agora ficam no banco de dados (tabela imagens_arquivos)
+uploads/
+
+# Logs e arquivos gerados em tempo de execução
+storage/mail_log/
+storage/.uploads_migrados
+storage/.uploads_mapa.json
+storage/.migracao.lock

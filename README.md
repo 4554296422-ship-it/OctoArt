@@ -49,7 +49,15 @@ Não existe mais "artista" ou "cliente": toda conta pode publicar trabalhos e pe
 - Publicações (trabalhos e pedidos) → `projetos`
 - Mensagens → `mensagens`
 - Pedidos / propostas → `propostas`
-- Foto de perfil e imagens → pasta `uploads/` + caminho no banco
+- Foto de perfil, banner e imagens dos projetos → tabela `imagens_arquivos` (a imagem em si fica no banco, otimizada em até ~900 KB, e é entregue por `img.php?id=...`). Nada é gravado na pasta do projeto.
+
+### Migrando imagens antigas (pasta `uploads/`) — automático
+Não precisa fazer nada. Depois de atualizar o projeto, as primeiras visitas ao site levam as imagens de `uploads/` para o banco sozinhas, em segundo plano e em lotes pequenos (`includes/migrar_uploads.php`). Quando termina, o site cria `storage/.uploads_migrados` e nunca mais tenta. Nada é apagado.
+
+- Quer forçar tudo de uma vez e ver o resumo? Abra `migrar_imagens.php` logado como administrador (ou `php migrar_imagens.php`).
+- Depois de conferir o site, a pasta `uploads/` pode ser apagada. Para tirá-la também do Git: `git rm -r --cached uploads` e commit (o `.gitignore` já impede novos envios).
+
+> No XAMPP, o MySQL vem com `max_allowed_packet=1M`. O site já ajusta o tamanho das imagens a esse limite, então não precisa mexer em nada.
 
 ## Categorias
 
