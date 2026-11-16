@@ -13,7 +13,8 @@ if (empty($_FILES['file'])) {
 }
 $path = upload_image($_FILES['file']);
 if (!$path) {
-    echo json_encode(['ok' => false, 'erro' => 'Falha no upload (use JPG/PNG/WebP até 8MB)']);
+    $motivo = image_error();
+    echo json_encode(['ok' => false, 'erro' => 'Não foi possível salvar a imagem.' . ($motivo ? ' ' . $motivo : ' Use JPG/PNG/WebP até 8MB.')]);
     exit;
 }
 echo json_encode(['ok' => true, 'url' => $path]);

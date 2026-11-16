@@ -6,3 +6,4 @@ storage/mail_log/
 storage/.uploads_migrados
 storage/.uploads_mapa.json
 storage/.migracao.lock
+storage/erros_imagem.log

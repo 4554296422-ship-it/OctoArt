@@ -138,6 +138,19 @@ const IMG_MAX_BYTES = 900 * 1024;
 /** Limite de pixels aceito na entrada (protege a memória do servidor). */
 const IMG_MAX_PIXELS = 50000000;
 
+/** Guarda (e grava em storage/erros_imagem.log) o motivo da última falha ao salvar uma imagem. */
+function image_error(?string $msg = null): string {
+    static $last = '';
+    if ($msg !== null) {
+        $last = $msg;
+        $dir = __DIR__ . '/../storage';
+        if (is_dir($dir) || @mkdir($dir, 0775, true)) {
+            @file_put_contents($dir . '/erros_imagem.log', date('c') . '  ' . $msg . "\n", FILE_APPEND | LOCK_EX);
+        }
+    }
+    return $last;
+}
+
 function ensure_image_table(): void {
     static $done = false;
     if ($done) return;
@@ -277,9 +290,15 @@ function optimize_image(string $bin, string $mime, int $limit): ?array {
  * Otimiza e grava a imagem no banco. Retorna a referência "img.php?id=..." ou null.
  */
 function store_image_binary(string $bin, string $mime, ?int $userId = null): ?string {
-    if (!in_array($mime, ['image/jpeg', 'image/png', 'image/webp', 'image/gif'], true)) return null;
+    if (!in_array($mime, ['image/jpeg', 'image/png', 'image/webp', 'image/gif'], true)) {
+        image_error('Tipo de arquivo não permitido (' . $mime . '). Use JPG, PNG, WebP ou GIF.');
+        return null;
+    }
     $opt = optimize_image($bin, $mime, image_byte_limit());
-    if (!$opt) return null;
+    if (!$opt) {
+        image_error('Não foi possível reduzir a imagem (' . round(strlen($bin) / 1024) . ' KB, ' . $mime . ') para caber no banco. A extensão GD do PHP está ativa? Tente uma imagem menor.');
+        return null;
+    }
     [$data, $outMime] = $opt;
     try {
         ensure_image_table();
@@ -293,6 +312,7 @@ function store_image_binary(string $bin, string $mime, ?int $userId = null): ?st
         $st->bindValue(5, $uid ?: null, $uid ? PDO::PARAM_INT : PDO::PARAM_NULL);
         $st->execute();
     } catch (Throwable $e) {
+        image_error('Erro do banco ao gravar a imagem (' . round(strlen($data) / 1024) . ' KB): ' . $e->getMessage());
         return null;
     }
     return 'img.php?id=' . $id;
@@ -300,14 +320,28 @@ function store_image_binary(string $bin, string $mime, ?int $userId = null): ?st
 
 /** Recebe um arquivo de $_FILES, valida e guarda no banco. Retorna "img.php?id=..." ou null. */
 function upload_image(array $file, string $subdir = ''): ?string {
-    if (($file['error'] ?? UPLOAD_ERR_NO_FILE) !== UPLOAD_ERR_OK) return null;
-    if (($file['size'] ?? 0) > 8 * 1024 * 1024) return null;
-    if (empty($file['tmp_name']) || !is_uploaded_file($file['tmp_name'])) return null;
+    $err = $file['error'] ?? UPLOAD_ERR_NO_FILE;
+    if ($err !== UPLOAD_ERR_OK) {
+        $msgs = [
+            UPLOAD_ERR_INI_SIZE => 'O PHP bloqueou o arquivo por ser maior que upload_max_filesize (' . ini_get('upload_max_filesize') . ') no php.ini.',
+            UPLOAD_ERR_FORM_SIZE => 'O arquivo é maior que o limite do formulário.',
+            UPLOAD_ERR_PARTIAL => 'O envio foi interrompido. Tente de novo.',
+            UPLOAD_ERR_NO_FILE => 'Nenhum arquivo foi enviado.',
+            UPLOAD_ERR_NO_TMP_DIR => 'O PHP não tem pasta temporária para receber o arquivo (upload_tmp_dir).',
+            UPLOAD_ERR_CANT_WRITE => 'O PHP não conseguiu gravar o arquivo temporário (disco cheio ou sem permissão).',
+        ];
+        if ($err !== UPLOAD_ERR_NO_FILE) image_error($msgs[$err] ?? ('Erro de upload do PHP código ' . $err));
+        else image_error($msgs[$err]);
+        return null;
+    }
+    if (($file['size'] ?? 0) > 8 * 1024 * 1024) { image_error('Arquivo maior que 8 MB.'); return null; }
+    if (empty($file['tmp_name']) || !is_uploaded_file($file['tmp_name'])) { image_error('O arquivo recebido não é um upload válido do PHP.'); return null; }
+    if (!function_exists('finfo_open')) { image_error('A extensão fileinfo do PHP está desativada (php.ini: extension=fileinfo).'); return null; }
     $finfo = finfo_open(FILEINFO_MIME_TYPE);
     $mime = finfo_file($finfo, $file['tmp_name']);
     finfo_close($finfo);
     $bin = @file_get_contents($file['tmp_name']);
-    if ($bin === false || $bin === '') return null;
+    if ($bin === false || $bin === '') { image_error('Não consegui ler o arquivo enviado.'); return null; }
     return store_image_binary($bin, (string)$mime);
 }
 
