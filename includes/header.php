@@ -1,5 +1,7 @@
 <?php
 require_once __DIR__ . '/auth.php';
+require_once __DIR__ . '/migrar_uploads.php';
+octoart_agendar_migracao_uploads(); // leva as imagens antigas de uploads/ para o banco, sozinho, em segundo plano
 $u = current_user();
 $active = $active ?? '';
 $theme = $_COOKIE['octoart_theme'] ?? 'dark';
@@ -33,6 +35,14 @@ $app_base = rtrim(str_replace('\\','/',dirname($_SERVER['SCRIPT_NAME'] ?? '/')),
           <li><a href="mensagens.php" class="<?= $active==='mensagens'?'active':'' ?>">Mensagens</a></li>
           <?php endif; ?>
       <?php endif; ?>
+      <?php /* Itens que só aparecem dentro do menu no celular */ ?>
+      <?php if ($u): ?>
+        <li class="nav-only-mobile"><a href="<?= is_admin($u) ? 'admin.php' : 'dashboard.php' ?>">Minha conta</a></li>
+        <li class="nav-only-mobile"><a href="logout.php">Sair</a></li>
+      <?php else: ?>
+        <li class="nav-only-mobile nav-cta"><a href="login.php?cadastro=1" class="btn btn-primary btn-block">Criar conta</a></li>
+        <li class="nav-only-mobile"><a href="login.php">Entrar</a></li>
+      <?php endif; ?>
     </ul>
     <div class="nav-actions">
       <?php if ($u):
@@ -58,14 +68,32 @@ $app_base = rtrim(str_replace('\\','/',dirname($_SERVER['SCRIPT_NAME'] ?? '/')),
           <?php endif; ?>
           <span style="font-size:.88rem;font-weight:600"><?= h(explode(' ', $u['nome'])[0]) ?></span>
         </a>
-        <a href="logout.php" class="btn btn-ghost btn-sm">Sair</a>
+        <a href="logout.php" class="btn btn-ghost btn-sm nav-hide-mobile">Sair</a>
       <?php else: ?>
-        <a href="login.php" class="btn btn-ghost btn-sm">Entrar</a>
-        <a href="login.php?cadastro=1" class="btn btn-primary btn-sm">Criar conta</a>
+        <a href="login.php" class="btn btn-ghost btn-sm nav-hide-mobile">Entrar</a>
+        <a href="login.php?cadastro=1" class="btn btn-primary btn-sm nav-hide-mobile">Criar conta</a>
       <?php endif; ?>
+      <button class="nav-toggle" type="button" id="navToggle" aria-label="Abrir menu" aria-expanded="false" aria-controls="navLinks"><span></span></button>
     </div>
   </div>
 </nav>
+<script>
+(function(){
+  const toggle = document.getElementById('navToggle');
+  const menu = document.getElementById('navLinks');
+  if (!toggle || !menu) return;
+  function setOpen(open) {
+    menu.classList.toggle('show', open);
+    toggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+    toggle.setAttribute('aria-label', open ? 'Fechar menu' : 'Abrir menu');
+  }
+  toggle.addEventListener('click', function(e){ e.stopPropagation(); setOpen(!menu.classList.contains('show')); });
+  menu.addEventListener('click', function(e){ if (e.target.closest('a')) setOpen(false); });
+  document.addEventListener('click', function(e){ if (!e.target.closest('.nav')) setOpen(false); });
+  document.addEventListener('keydown', function(e){ if (e.key === 'Escape') setOpen(false); });
+  window.addEventListener('resize', function(){ if (window.innerWidth > 960) setOpen(false); });
+})();
+</script>
 <script>
 (function(){
   const btn = document.getElementById('themeToggle');

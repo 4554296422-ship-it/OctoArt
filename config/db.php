@@ -48,8 +48,8 @@ function media_url(?string $path): string {
 }
 
 /**
- * Baixa uma imagem remota (ex.: foto do Google) e salva em uploads/.
- * Retorna o caminho local (uploads/...) ou null em caso de falha.
+ * Baixa uma imagem remota (ex.: foto do Google) e guarda no banco de dados.
+ * Retorna a referência da imagem (img.php?id=...) ou null em caso de falha.
  */
 function download_remote_image(string $url, string $subdir = ''): ?string {
     $url = trim($url);
@@ -102,12 +102,7 @@ function download_remote_image(string $url, string $subdir = ''): ?string {
     }
     if (!isset($map[$mime])) return null;
 
-    $name = 'img_' . bin2hex(random_bytes(8)) . '.' . $map[$mime];
-    $dir = __DIR__ . '/../uploads' . ($subdir ? '/' . $subdir : '');
-    if (!is_dir($dir)) @mkdir($dir, 0775, true);
-    $dest = $dir . '/' . $name;
-    if (@file_put_contents($dest, $bin) === false) return null;
-    return 'uploads/' . ($subdir ? $subdir . '/' : '') . $name;
+    return store_image_binary($bin, $mime);
 }
 
 function money($v): string {
@@ -130,20 +125,190 @@ function initials(string $nome): string {
     return $i ?: '?';
 }
 
+/* =========================================================
+   Imagens guardadas no banco de dados (tabela imagens_arquivos)
+   Nada é gravado na pasta do projeto: cada imagem é otimizada
+   (redimensionada/comprimida) e servida por img.php.
+   ========================================================= */
+
+/** Maior lado (px) de uma imagem guardada; imagens maiores são reduzidas. */
+const IMG_MAX_SIDE = 1600;
+/** Tamanho máximo (bytes) de uma imagem depois de otimizada. */
+const IMG_MAX_BYTES = 900 * 1024;
+/** Limite de pixels aceito na entrada (protege a memória do servidor). */
+const IMG_MAX_PIXELS = 50000000;
+
+function ensure_image_table(): void {
+    static $done = false;
+    if ($done) return;
+    $done = true;
+    try {
+        db()->exec("CREATE TABLE IF NOT EXISTS imagens_arquivos (
+            id CHAR(32) NOT NULL PRIMARY KEY,
+            mime VARCHAR(40) NOT NULL,
+            tamanho INT NOT NULL,
+            dados MEDIUMBLOB NOT NULL,
+            id_usuario INT NULL,
+            data_criacao DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP,
+            KEY idx_imagens_arquivos_usuario (id_usuario)
+        ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4");
+    } catch (Throwable $e) {
+        // Tabela já existe ou o usuário do banco não pode criar: o INSERT mostra o erro real.
+    }
+}
+
+/** Limite efetivo em bytes, respeitando o max_allowed_packet do MySQL (1 MB no XAMPP). */
+function image_byte_limit(): int {
+    static $limit = null;
+    if ($limit !== null) return $limit;
+    $limit = IMG_MAX_BYTES;
+    try {
+        $packet = (int)db()->query('SELECT @@max_allowed_packet')->fetchColumn();
+        if ($packet > 0) $limit = max(100 * 1024, min($limit, $packet - 128 * 1024));
+    } catch (Throwable $e) {}
+    return $limit;
+}
+
+/** Converte valores como "128M" do php.ini em bytes. */
+function ini_to_bytes(string $v): int {
+    $v = trim($v);
+    $n = (int)$v;
+    switch (strtolower(substr($v, -1))) {
+        case 'g': $n *= 1024;
+        case 'm': $n *= 1024;
+        case 'k': $n *= 1024;
+    }
+    return $n;
+}
+
+/** Garante memória para processar uma imagem; tenta aumentar o limite do PHP se for preciso. */
+function image_ensure_memory(int $needBytes): bool {
+    $cur = (string)ini_get('memory_limit');
+    if ($cur === '-1') return true;
+    $total = $needBytes + memory_get_usage() + 16 * 1024 * 1024;
+    if (ini_to_bytes($cur) >= $total) return true;
+    if ($total > 1024 * 1024 * 1024) return false; // acima de 1 GB: recusa
+    @ini_set('memory_limit', (string)((int)ceil($total / 1048576) + 16) . 'M');
+    return ini_to_bytes((string)ini_get('memory_limit')) >= $total;
+}
+
+/**
+ * Reduz e comprime a imagem até caber em $limit bytes.
+ * Retorna [binário, mime] ou null se não for possível.
+ */
+function optimize_image(string $bin, string $mime, int $limit): ?array {
+    $fits = strlen($bin) <= $limit;
+    // GIF pequeno: guarda como está (preserva a animação).
+    if ($mime === 'image/gif' && $fits) return [$bin, $mime];
+    if (!function_exists('imagecreatefromstring')) return $fits ? [$bin, $mime] : null;
+
+    $info = @getimagesizefromstring($bin);
+    if (!$info || $info[0] < 1 || $info[1] < 1 || $info[0] * $info[1] > IMG_MAX_PIXELS) return null;
+
+    // Fotos grandes (ex.: 24 MP do celular) precisam de bastante memória para serem decodificadas.
+    if (!image_ensure_memory((int)($info[0] * $info[1] * 4.5))) return null;
+
+    $src = @imagecreatefromstring($bin);
+    if (!$src) return $fits ? [$bin, $mime] : null;
+
+    // Corrige a rotação de fotos de celular (EXIF) antes de reduzir.
+    if ($mime === 'image/jpeg' && function_exists('exif_read_data')) {
+        try {
+            $mem = fopen('php://memory', 'r+');
+            fwrite($mem, $bin);
+            rewind($mem);
+            $exif = @exif_read_data($mem);
+            fclose($mem);
+            $rot = [3 => 180, 6 => -90, 8 => 90][(int)($exif['Orientation'] ?? 1)] ?? 0;
+            if ($rot) {
+                $r = imagerotate($src, $rot, 0);
+                if ($r) $src = $r;
+            }
+        } catch (Throwable $e) {}
+    }
+
+    $w = imagesx($src);
+    $h = imagesy($src);
+    $scale = min(1.0, IMG_MAX_SIDE / max($w, $h));
+    $useWebp = function_exists('imagewebp');
+
+    for ($round = 0; $round < 8; $round++) {
+        $nw = max(1, (int)round($w * $scale));
+        $nh = max(1, (int)round($h * $scale));
+        $dst = imagecreatetruecolor($nw, $nh);
+        imagealphablending($dst, false);
+        imagesavealpha($dst, true);
+        imagefill($dst, 0, 0, imagecolorallocatealpha($dst, 255, 255, 255, 127));
+        imagecopyresampled($dst, $src, 0, 0, 0, 0, $nw, $nh, $w, $h);
+
+        foreach ([85, 75, 65, 55] as $q) {
+            ob_start();
+            if ($useWebp) {
+                imagewebp($dst, null, $q);
+                $outMime = 'image/webp';
+            } elseif ($mime === 'image/jpeg') {
+                // JPEG não tem transparência: assenta sobre fundo branco.
+                $flat = imagecreatetruecolor($nw, $nh);
+                imagefill($flat, 0, 0, imagecolorallocate($flat, 255, 255, 255));
+                imagecopy($flat, $dst, 0, 0, 0, 0, $nw, $nh);
+                imagejpeg($flat, null, $q);
+                imagedestroy($flat);
+                $outMime = 'image/jpeg';
+            } else {
+                imagepng($dst, null, 9);
+                $outMime = 'image/png';
+            }
+            $out = (string)ob_get_clean();
+            if ($out !== '' && strlen($out) <= $limit) {
+                imagedestroy($dst);
+                imagedestroy($src);
+                return [$out, $outMime];
+            }
+            if (!$useWebp && $mime !== 'image/jpeg') break; // PNG não tem "qualidade": só reduz o tamanho
+        }
+        imagedestroy($dst);
+        $scale *= 0.8;
+    }
+    imagedestroy($src);
+    return null;
+}
+
+/**
+ * Otimiza e grava a imagem no banco. Retorna a referência "img.php?id=..." ou null.
+ */
+function store_image_binary(string $bin, string $mime, ?int $userId = null): ?string {
+    if (!in_array($mime, ['image/jpeg', 'image/png', 'image/webp', 'image/gif'], true)) return null;
+    $opt = optimize_image($bin, $mime, image_byte_limit());
+    if (!$opt) return null;
+    [$data, $outMime] = $opt;
+    try {
+        ensure_image_table();
+        $id = bin2hex(random_bytes(16));
+        $uid = $userId ?? (isset($_SESSION['id_usuario']) ? (int)$_SESSION['id_usuario'] : null);
+        $st = db()->prepare('INSERT INTO imagens_arquivos (id, mime, tamanho, dados, id_usuario) VALUES (?,?,?,?,?)');
+        $st->bindValue(1, $id);
+        $st->bindValue(2, $outMime);
+        $st->bindValue(3, strlen($data), PDO::PARAM_INT);
+        $st->bindValue(4, $data, PDO::PARAM_LOB);
+        $st->bindValue(5, $uid ?: null, $uid ? PDO::PARAM_INT : PDO::PARAM_NULL);
+        $st->execute();
+    } catch (Throwable $e) {
+        return null;
+    }
+    return 'img.php?id=' . $id;
+}
+
+/** Recebe um arquivo de $_FILES, valida e guarda no banco. Retorna "img.php?id=..." ou null. */
 function upload_image(array $file, string $subdir = ''): ?string {
     if (($file['error'] ?? UPLOAD_ERR_NO_FILE) !== UPLOAD_ERR_OK) return null;
     if (($file['size'] ?? 0) > 8 * 1024 * 1024) return null;
+    if (empty($file['tmp_name']) || !is_uploaded_file($file['tmp_name'])) return null;
     $finfo = finfo_open(FILEINFO_MIME_TYPE);
     $mime = finfo_file($finfo, $file['tmp_name']);
     finfo_close($finfo);
-    $map = ['image/jpeg' => 'jpg', 'image/png' => 'png', 'image/webp' => 'webp', 'image/gif' => 'gif'];
-    if (!isset($map[$mime])) return null;
-    $name = 'img_' . bin2hex(random_bytes(8)) . '.' . $map[$mime];
-    $dir = __DIR__ . '/../uploads' . ($subdir ? '/' . $subdir : '');
-    if (!is_dir($dir)) mkdir($dir, 0775, true);
-    $dest = $dir . '/' . $name;
-    if (!move_uploaded_file($file['tmp_name'], $dest)) return null;
-    return 'uploads/' . ($subdir ? $subdir . '/' : '') . $name;
+    $bin = @file_get_contents($file['tmp_name']);
+    if ($bin === false || $bin === '') return null;
+    return store_image_binary($bin, (string)$mime);
 }
 
 
